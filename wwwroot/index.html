@@ -746,17 +746,19 @@ async function filtrarPorSeguimiento() {
 async function registrarControl() {
   const btn   = document.getElementById('btn-reg-ctrl');
   const alert = document.getElementById('alert-ctrl');
-  const segId  = parseInt(document.getElementById('f-seg-id').value);
+    const segId = parseInt(document.getElementById('f-seg-id').value || '0');
   const citaId = parseInt(document.getElementById('f-cita-id').value);
   const fecha  = document.getElementById('f-fecha').value;
   const semana = parseInt(document.getElementById('f-semana').value);
   const tipoId = parseInt(document.getElementById('f-tipo-signo').value);
   const valor  = parseFloat(document.getElementById('f-valor').value);
 
-  if (!segId || !citaId || !fecha || !semana || !tipoId || isNaN(valor)) {
-    showAlert(alert, 'error', 'Por favor completa todos los campos.');
-    return;
-  }
+    if (!segId) {
+        showAlert(alertEl, 'error', 'Primero busca el CI de la paciente.');
+        return;
+    }
+    if (!citaId || !fecha || !semana || !tipoId || isNaN(valor)) {
+        showAlert(alertEl, 'error', 'Por favor completa todos los campos.');
 
   btn.disabled = true;
   btn.textContent = 'Registrando…';
