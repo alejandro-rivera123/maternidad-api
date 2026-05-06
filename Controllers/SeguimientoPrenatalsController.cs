@@ -24,7 +24,7 @@ namespace Maternidad.Controllers
                 from s in _context.SeguimientoPrenatal
                 select new
                 {
-                    s.Id,
+
                     s.CIPaciente,
                     s.CIEmpleado,
                     s.FechaInicio,
@@ -51,7 +51,6 @@ namespace Maternidad.Controllers
                 where s.CIPaciente == ci
                 select new
                 {
-                    s.Id,
                     s.CIPaciente,
                     s.CIEmpleado,
                     s.FechaInicio,
@@ -79,7 +78,7 @@ namespace Maternidad.Controllers
             return Ok(new
             {
                 Mensaje = "Seguimiento prenatal registrado",
-                seguimiento.Id,
+ 
                 seguimiento.CIPaciente,
                 seguimiento.FechaInicio,
                 seguimiento.Estado

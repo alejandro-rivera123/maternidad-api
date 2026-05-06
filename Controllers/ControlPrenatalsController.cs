@@ -27,7 +27,7 @@ namespace Maternidad.Controllers
                 orderby c.FechaControl
                 select new
                 {
-                    c.Id,
+
                     CIPaciente = s.CIPaciente,
                     CIEmpleado = s.CIEmpleado,
                     c.CitaId,
@@ -55,7 +55,7 @@ namespace Maternidad.Controllers
                 orderby c.FechaControl
                 select new
                 {
-                    c.Id,
+
                     c.CitaId,
                     c.FechaControl,
                     c.SemanaGestacion,
@@ -86,7 +86,7 @@ namespace Maternidad.Controllers
                 where c.CitaId == citaId
                 select new
                 {
-                    c.Id,
+
                     c.CitaId,
                     CIPaciente = s.CIPaciente,
                     c.FechaControl,

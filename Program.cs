@@ -11,7 +11,7 @@ if (databaseUrl != null)
 {
     var uri = new Uri(databaseUrl);
     var userInfo = uri.UserInfo.Split(':');
-    var port = uri.Port > 0 ? uri.Port : 5432; // si no hay puerto usa 5432 por defecto
+    var port = uri.Port > 0 ? uri.Port : 5432;
     connectionString = $"Host={uri.Host};Port={port};" +
                        $"Database={uri.AbsolutePath.TrimStart('/')};" +
                        $"Username={userInfo[0]};Password={userInfo[1]};" +
@@ -56,8 +56,12 @@ app.UseSwagger();
 app.UseSwaggerUI(c =>
 {
     c.SwaggerEndpoint("/swagger/v1/swagger.json", "Maternidad API v1");
-    c.RoutePrefix = string.Empty;
+    c.RoutePrefix = "swagger"; // ← CAMBIADO: antes era string.Empty
 });
+
+// ── Archivos estáticos (wwwroot/index.html) ──
+app.UseDefaultFiles();   // index.html como página por defecto en "/"
+app.UseStaticFiles();    // sirve todo lo que está en wwwroot/
 
 app.UseCors("AllowAll");
 app.UseAuthorization();
