@@ -12,8 +12,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace Maternidad.Migrations
 {
     [DbContext(typeof(MaternidadContext))]
-    [Migration("20260506180309_SeedData")]
-    partial class SeedData
+    [Migration("20260506180830_InitialCreateWithSeed")]
+    partial class InitialCreateWithSeed
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
