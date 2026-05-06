@@ -3,6 +3,22 @@
   "WorkspaceRootPath": "C:\\Users\\Alejandro\\Documents\\sistemas de informacion 2\\webs\\Maternidad\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{1C4829E0-7420-4920-A272-06BD8189929B}|Maternidad.csproj|c:\\users\\alejandro\\documents\\sistemas de informacion 2\\webs\\maternidad\\controllers\\seguimientoprenatalscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C4829E0-7420-4920-A272-06BD8189929B}|Maternidad.csproj|solutionrelative:controllers\\seguimientoprenatalscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C4829E0-7420-4920-A272-06BD8189929B}|Maternidad.csproj|c:\\users\\alejandro\\documents\\sistemas de informacion 2\\webs\\maternidad\\dominio\\paciente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C4829E0-7420-4920-A272-06BD8189929B}|Maternidad.csproj|solutionrelative:dominio\\paciente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C4829E0-7420-4920-A272-06BD8189929B}|Maternidad.csproj|c:\\users\\alejandro\\documents\\sistemas de informacion 2\\webs\\maternidad\\dominio\\seguimientoprenatal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C4829E0-7420-4920-A272-06BD8189929B}|Maternidad.csproj|solutionrelative:dominio\\seguimientoprenatal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C4829E0-7420-4920-A272-06BD8189929B}|Maternidad.csproj|c:\\users\\alejandro\\documents\\sistemas de informacion 2\\webs\\maternidad\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C4829E0-7420-4920-A272-06BD8189929B}|Maternidad.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{1C4829E0-7420-4920-A272-06BD8189929B}|Maternidad.csproj|c:\\users\\alejandro\\documents\\sistemas de informacion 2\\webs\\maternidad\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
       "RelativeMoniker": "D:0:0:{1C4829E0-7420-4920-A272-06BD8189929B}|Maternidad.csproj|solutionrelative:.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
     },
@@ -35,20 +51,12 @@
       "RelativeMoniker": "D:0:0:{1C4829E0-7420-4920-A272-06BD8189929B}|Maternidad.csproj|solutionrelative:dominio\\signovitalneonatal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1C4829E0-7420-4920-A272-06BD8189929B}|Maternidad.csproj|c:\\users\\alejandro\\documents\\sistemas de informacion 2\\webs\\maternidad\\dominio\\seguimientoprenatal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1C4829E0-7420-4920-A272-06BD8189929B}|Maternidad.csproj|solutionrelative:dominio\\seguimientoprenatal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{1C4829E0-7420-4920-A272-06BD8189929B}|Maternidad.csproj|c:\\users\\alejandro\\documents\\sistemas de informacion 2\\webs\\maternidad\\dominio\\reciennacido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1C4829E0-7420-4920-A272-06BD8189929B}|Maternidad.csproj|solutionrelative:dominio\\reciennacido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1C4829E0-7420-4920-A272-06BD8189929B}|Maternidad.csproj|c:\\users\\alejandro\\documents\\sistemas de informacion 2\\webs\\maternidad\\dominio\\parto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1C4829E0-7420-4920-A272-06BD8189929B}|Maternidad.csproj|solutionrelative:dominio\\parto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1C4829E0-7420-4920-A272-06BD8189929B}|Maternidad.csproj|c:\\users\\alejandro\\documents\\sistemas de informacion 2\\webs\\maternidad\\dominio\\paciente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1C4829E0-7420-4920-A272-06BD8189929B}|Maternidad.csproj|solutionrelative:dominio\\paciente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1C4829E0-7420-4920-A272-06BD8189929B}|Maternidad.csproj|c:\\users\\alejandro\\documents\\sistemas de informacion 2\\webs\\maternidad\\dominio\\evaluacioninicial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -81,10 +89,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{1C4829E0-7420-4920-A272-06BD8189929B}|Maternidad.csproj|c:\\users\\alejandro\\documents\\sistemas de informacion 2\\webs\\maternidad\\controllers\\controlprenatalscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1C4829E0-7420-4920-A272-06BD8189929B}|Maternidad.csproj|solutionrelative:controllers\\controlprenatalscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1C4829E0-7420-4920-A272-06BD8189929B}|Maternidad.csproj|c:\\users\\alejandro\\documents\\sistemas de informacion 2\\webs\\maternidad\\controllers\\seguimientoprenatalscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1C4829E0-7420-4920-A272-06BD8189929B}|Maternidad.csproj|solutionrelative:controllers\\seguimientoprenatalscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1C4829E0-7420-4920-A272-06BD8189929B}|Maternidad.csproj|c:\\users\\alejandro\\documents\\sistemas de informacion 2\\webs\\maternidad\\controllers\\partoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -126,7 +130,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -137,29 +141,116 @@
               "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CasosDeUso.cs",
+              "DocumentMoniker": "C:\\Users\\Alejandro\\Documents\\sistemas de informacion 2\\webs\\Maternidad\\Controllers\\CasosDeUso.cs",
+              "RelativeDocumentMoniker": "Controllers\\CasosDeUso.cs",
+              "ToolTip": "C:\\Users\\Alejandro\\Documents\\sistemas de informacion 2\\webs\\Maternidad\\Controllers\\CasosDeUso.cs",
+              "RelativeToolTip": "Controllers\\CasosDeUso.cs",
+              "ViewState": "AgIAAPIAAAAAAAAAAAAgwAABAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-01T20:38:20.498Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ConsultasController.cs",
+              "DocumentMoniker": "C:\\Users\\Alejandro\\Documents\\sistemas de informacion 2\\webs\\Maternidad\\Controllers\\ConsultasController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ConsultasController.cs",
+              "ToolTip": "C:\\Users\\Alejandro\\Documents\\sistemas de informacion 2\\webs\\Maternidad\\Controllers\\ConsultasController.cs",
+              "RelativeToolTip": "Controllers\\ConsultasController.cs",
+              "ViewState": "AgIAAGgAAAAAAAAAAAAgwHcAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-01T19:57:29.553Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "TipoSignoPrenatalsController.cs",
+              "DocumentMoniker": "C:\\Users\\Alejandro\\Documents\\sistemas de informacion 2\\webs\\Maternidad\\Controllers\\TipoSignoPrenatalsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\TipoSignoPrenatalsController.cs",
+              "ToolTip": "C:\\Users\\Alejandro\\Documents\\sistemas de informacion 2\\webs\\Maternidad\\Controllers\\TipoSignoPrenatalsController.cs",
+              "RelativeToolTip": "Controllers\\TipoSignoPrenatalsController.cs",
+              "ViewState": "AgIAAEgAAAAAAAAAAAAowEwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-01T16:26:50.12Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SeguimientoPrenatal.cs",
+              "DocumentMoniker": "C:\\Users\\Alejandro\\Documents\\sistemas de informacion 2\\webs\\Maternidad\\Dominio\\SeguimientoPrenatal.cs",
+              "RelativeDocumentMoniker": "Dominio\\SeguimientoPrenatal.cs",
+              "ToolTip": "C:\\Users\\Alejandro\\Documents\\sistemas de informacion 2\\webs\\Maternidad\\Dominio\\SeguimientoPrenatal.cs",
+              "RelativeToolTip": "Dominio\\SeguimientoPrenatal.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-01T14:37:17.696Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Paciente.cs",
+              "DocumentMoniker": "C:\\Users\\Alejandro\\Documents\\sistemas de informacion 2\\webs\\Maternidad\\Dominio\\Paciente.cs",
+              "RelativeDocumentMoniker": "Dominio\\Paciente.cs",
+              "ToolTip": "C:\\Users\\Alejandro\\Documents\\sistemas de informacion 2\\webs\\Maternidad\\Dominio\\Paciente.cs",
+              "RelativeToolTip": "Dominio\\Paciente.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAcwA4AAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-01T15:02:11.337Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SeguimientoPrenatalsController.cs",
+              "DocumentMoniker": "C:\\Users\\Alejandro\\Documents\\sistemas de informacion 2\\webs\\Maternidad\\Controllers\\SeguimientoPrenatalsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\SeguimientoPrenatalsController.cs",
+              "ToolTip": "C:\\Users\\Alejandro\\Documents\\sistemas de informacion 2\\webs\\Maternidad\\Controllers\\SeguimientoPrenatalsController.cs",
+              "RelativeToolTip": "Controllers\\SeguimientoPrenatalsController.cs",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAgwFMAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-01T14:56:14.788Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "TratamientoNeonatal.cs",
+              "DocumentMoniker": "C:\\Users\\Alejandro\\Documents\\sistemas de informacion 2\\webs\\Maternidad\\Dominio\\TratamientoNeonatal.cs",
+              "RelativeDocumentMoniker": "Dominio\\TratamientoNeonatal.cs",
+              "ToolTip": "C:\\Users\\Alejandro\\Documents\\sistemas de informacion 2\\webs\\Maternidad\\Dominio\\TratamientoNeonatal.cs",
+              "RelativeToolTip": "Dominio\\TratamientoNeonatal.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-01T14:39:24.63Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Alejandro\\Documents\\sistemas de informacion 2\\webs\\Maternidad\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\Alejandro\\Documents\\sistemas de informacion 2\\webs\\Maternidad\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAmwBYAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-06T02:19:47.685Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": ".gitignore",
-              "DocumentMoniker": "C:\\Users\\Alejandro\\Documents\\sistemas de informacion 2\\webs\\Maternidad\\.gitignore",
-              "RelativeDocumentMoniker": ".gitignore",
-              "ToolTip": "C:\\Users\\Alejandro\\Documents\\sistemas de informacion 2\\webs\\Maternidad\\.gitignore",
-              "RelativeToolTip": ".gitignore",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2026-05-06T01:41:15.868Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 29,
               "Title": "20260506010749_m1.cs",
               "DocumentMoniker": "C:\\Users\\Alejandro\\Documents\\sistemas de informacion 2\\webs\\Maternidad\\Migrations\\20260506010749_m1.cs",
               "RelativeDocumentMoniker": "Migrations\\20260506010749_m1.cs",
@@ -172,54 +263,18 @@
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "TratamientoNeonatal.cs",
-              "DocumentMoniker": "C:\\Users\\Alejandro\\Documents\\sistemas de informacion 2\\webs\\Maternidad\\Dominio\\TratamientoNeonatal.cs",
-              "RelativeDocumentMoniker": "Dominio\\TratamientoNeonatal.cs",
-              "ToolTip": "C:\\Users\\Alejandro\\Documents\\sistemas de informacion 2\\webs\\Maternidad\\Dominio\\TratamientoNeonatal.cs",
-              "RelativeToolTip": "Dominio\\TratamientoNeonatal.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAzAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-01T14:39:24.63Z"
+              "Title": ".gitignore",
+              "DocumentMoniker": "C:\\Users\\Alejandro\\Documents\\sistemas de informacion 2\\webs\\Maternidad\\.gitignore",
+              "RelativeDocumentMoniker": ".gitignore",
+              "ToolTip": "C:\\Users\\Alejandro\\Documents\\sistemas de informacion 2\\webs\\Maternidad\\.gitignore",
+              "RelativeToolTip": ".gitignore",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-05-06T01:41:15.868Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "CasosDeUso.cs",
-              "DocumentMoniker": "C:\\Users\\Alejandro\\Documents\\sistemas de informacion 2\\webs\\Maternidad\\Controllers\\CasosDeUso.cs",
-              "RelativeDocumentMoniker": "Controllers\\CasosDeUso.cs",
-              "ToolTip": "C:\\Users\\Alejandro\\Documents\\sistemas de informacion 2\\webs\\Maternidad\\Controllers\\CasosDeUso.cs",
-              "RelativeToolTip": "Controllers\\CasosDeUso.cs",
-              "ViewState": "AgIAAPIAAAAAAAAAAAAgwAABAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-01T20:38:20.498Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ConsultasController.cs",
-              "DocumentMoniker": "C:\\Users\\Alejandro\\Documents\\sistemas de informacion 2\\webs\\Maternidad\\Controllers\\ConsultasController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ConsultasController.cs",
-              "ToolTip": "C:\\Users\\Alejandro\\Documents\\sistemas de informacion 2\\webs\\Maternidad\\Controllers\\ConsultasController.cs",
-              "RelativeToolTip": "Controllers\\ConsultasController.cs",
-              "ViewState": "AgIAAGgAAAAAAAAAAAAgwHcAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-01T19:57:29.553Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "TipoSignoPrenatalsController.cs",
-              "DocumentMoniker": "C:\\Users\\Alejandro\\Documents\\sistemas de informacion 2\\webs\\Maternidad\\Controllers\\TipoSignoPrenatalsController.cs",
-              "RelativeDocumentMoniker": "Controllers\\TipoSignoPrenatalsController.cs",
-              "ToolTip": "C:\\Users\\Alejandro\\Documents\\sistemas de informacion 2\\webs\\Maternidad\\Controllers\\TipoSignoPrenatalsController.cs",
-              "RelativeToolTip": "Controllers\\TipoSignoPrenatalsController.cs",
-              "ViewState": "AgIAAEgAAAAAAAAAAAAowEwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-01T16:26:50.12Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 9,
               "Title": "TipoSignoVitalNeonatal.cs",
               "DocumentMoniker": "C:\\Users\\Alejandro\\Documents\\sistemas de informacion 2\\webs\\Maternidad\\Dominio\\TipoSignoVitalNeonatal.cs",
               "RelativeDocumentMoniker": "Dominio\\TipoSignoVitalNeonatal.cs",
@@ -231,7 +286,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 10,
               "Title": "TipoSignoPrenatal.cs",
               "DocumentMoniker": "C:\\Users\\Alejandro\\Documents\\sistemas de informacion 2\\webs\\Maternidad\\Dominio\\TipoSignoPrenatal.cs",
               "RelativeDocumentMoniker": "Dominio\\TipoSignoPrenatal.cs",
@@ -243,7 +298,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 11,
               "Title": "SignoVitalNeonatal.cs",
               "DocumentMoniker": "C:\\Users\\Alejandro\\Documents\\sistemas de informacion 2\\webs\\Maternidad\\Dominio\\SignoVitalNeonatal.cs",
               "RelativeDocumentMoniker": "Dominio\\SignoVitalNeonatal.cs",
@@ -255,19 +310,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "SeguimientoPrenatal.cs",
-              "DocumentMoniker": "C:\\Users\\Alejandro\\Documents\\sistemas de informacion 2\\webs\\Maternidad\\Dominio\\SeguimientoPrenatal.cs",
-              "RelativeDocumentMoniker": "Dominio\\SeguimientoPrenatal.cs",
-              "ToolTip": "C:\\Users\\Alejandro\\Documents\\sistemas de informacion 2\\webs\\Maternidad\\Dominio\\SeguimientoPrenatal.cs",
-              "RelativeToolTip": "Dominio\\SeguimientoPrenatal.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAiwBUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-01T14:37:17.696Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 12,
               "Title": "RecienNacido.cs",
               "DocumentMoniker": "C:\\Users\\Alejandro\\Documents\\sistemas de informacion 2\\webs\\Maternidad\\Dominio\\RecienNacido.cs",
               "RelativeDocumentMoniker": "Dominio\\RecienNacido.cs",
@@ -279,7 +322,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 13,
               "Title": "Parto.cs",
               "DocumentMoniker": "C:\\Users\\Alejandro\\Documents\\sistemas de informacion 2\\webs\\Maternidad\\Dominio\\Parto.cs",
               "RelativeDocumentMoniker": "Dominio\\Parto.cs",
@@ -291,19 +334,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Paciente.cs",
-              "DocumentMoniker": "C:\\Users\\Alejandro\\Documents\\sistemas de informacion 2\\webs\\Maternidad\\Dominio\\Paciente.cs",
-              "RelativeDocumentMoniker": "Dominio\\Paciente.cs",
-              "ToolTip": "C:\\Users\\Alejandro\\Documents\\sistemas de informacion 2\\webs\\Maternidad\\Dominio\\Paciente.cs",
-              "RelativeToolTip": "Dominio\\Paciente.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAcwA4AAAA1AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-01T15:02:11.337Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "EvaluacionInicial.cs",
               "DocumentMoniker": "C:\\Users\\Alejandro\\Documents\\sistemas de informacion 2\\webs\\Maternidad\\Dominio\\EvaluacionInicial.cs",
               "RelativeDocumentMoniker": "Dominio\\EvaluacionInicial.cs",
@@ -315,7 +346,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "ControlPrenatal.cs",
               "DocumentMoniker": "C:\\Users\\Alejandro\\Documents\\sistemas de informacion 2\\webs\\Maternidad\\Dominio\\ControlPrenatal.cs",
               "RelativeDocumentMoniker": "Dominio\\ControlPrenatal.cs",
@@ -327,7 +358,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 16,
               "Title": "ComplicacionNeonatal.cs",
               "DocumentMoniker": "C:\\Users\\Alejandro\\Documents\\sistemas de informacion 2\\webs\\Maternidad\\Dominio\\ComplicacionNeonatal.cs",
               "RelativeDocumentMoniker": "Dominio\\ComplicacionNeonatal.cs",
@@ -339,7 +370,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 17,
               "Title": "ComplicacionMaterna.cs",
               "DocumentMoniker": "C:\\Users\\Alejandro\\Documents\\sistemas de informacion 2\\webs\\Maternidad\\Dominio\\ComplicacionMaterna.cs",
               "RelativeDocumentMoniker": "Dominio\\ComplicacionMaterna.cs",
@@ -351,7 +382,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 18,
               "Title": "AlertaNeonatal.cs",
               "DocumentMoniker": "C:\\Users\\Alejandro\\Documents\\sistemas de informacion 2\\webs\\Maternidad\\Dominio\\AlertaNeonatal.cs",
               "RelativeDocumentMoniker": "Dominio\\AlertaNeonatal.cs",
@@ -363,7 +394,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 19,
               "Title": "Tablaintermediascontrollers.cs",
               "DocumentMoniker": "C:\\Users\\Alejandro\\Documents\\sistemas de informacion 2\\webs\\Maternidad\\Controllers\\Tablaintermediascontrollers.cs",
               "RelativeDocumentMoniker": "Controllers\\Tablaintermediascontrollers.cs",
@@ -375,7 +406,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 20,
               "Title": "Reciennacidoscontroller.cs",
               "DocumentMoniker": "C:\\Users\\Alejandro\\Documents\\sistemas de informacion 2\\webs\\Maternidad\\Controllers\\Reciennacidoscontroller.cs",
               "RelativeDocumentMoniker": "Controllers\\Reciennacidoscontroller.cs",
@@ -387,7 +418,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 21,
               "Title": "ControlPrenatalsController.cs",
               "DocumentMoniker": "C:\\Users\\Alejandro\\Documents\\sistemas de informacion 2\\webs\\Maternidad\\Controllers\\ControlPrenatalsController.cs",
               "RelativeDocumentMoniker": "Controllers\\ControlPrenatalsController.cs",
@@ -399,19 +430,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "SeguimientoPrenatalsController.cs",
-              "DocumentMoniker": "C:\\Users\\Alejandro\\Documents\\sistemas de informacion 2\\webs\\Maternidad\\Controllers\\SeguimientoPrenatalsController.cs",
-              "RelativeDocumentMoniker": "Controllers\\SeguimientoPrenatalsController.cs",
-              "ToolTip": "C:\\Users\\Alejandro\\Documents\\sistemas de informacion 2\\webs\\Maternidad\\Controllers\\SeguimientoPrenatalsController.cs",
-              "RelativeToolTip": "Controllers\\SeguimientoPrenatalsController.cs",
-              "ViewState": "AgIAADwAAAAAAAAAAAAgwFgAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-01T14:56:14.788Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 22,
               "Title": "PartosController.cs",
               "DocumentMoniker": "C:\\Users\\Alejandro\\Documents\\sistemas de informacion 2\\webs\\Maternidad\\Controllers\\PartosController.cs",
               "RelativeDocumentMoniker": "Controllers\\PartosController.cs",
@@ -423,7 +442,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 23,
               "Title": "WeatherForecastController.cs",
               "DocumentMoniker": "C:\\Users\\Alejandro\\Documents\\sistemas de informacion 2\\webs\\Maternidad\\Controllers\\WeatherForecastController.cs",
               "RelativeDocumentMoniker": "Controllers\\WeatherForecastController.cs",
@@ -435,7 +454,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 24,
               "Title": "MaternidadContext.cs",
               "DocumentMoniker": "C:\\Users\\Alejandro\\Documents\\sistemas de informacion 2\\webs\\Maternidad\\Data\\MaternidadContext.cs",
               "RelativeDocumentMoniker": "Data\\MaternidadContext.cs",
@@ -447,7 +466,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 25,
               "Title": "launchSettings.json",
               "DocumentMoniker": "C:\\Users\\Alejandro\\Documents\\sistemas de informacion 2\\webs\\Maternidad\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "Properties\\launchSettings.json",
@@ -459,7 +478,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 26,
               "Title": "20260501193204_m3.cs",
               "DocumentMoniker": "C:\\Users\\Alejandro\\Documents\\sistemas de informacion 2\\webs\\Maternidad\\Migrations\\20260501193204_m3.cs",
               "RelativeDocumentMoniker": "Migrations\\20260501193204_m3.cs",
@@ -471,7 +490,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 27,
               "Title": "20260501192600_m2.cs",
               "DocumentMoniker": "C:\\Users\\Alejandro\\Documents\\sistemas de informacion 2\\webs\\Maternidad\\Migrations\\20260501192600_m2.cs",
               "RelativeDocumentMoniker": "Migrations\\20260501192600_m2.cs",
@@ -483,7 +502,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 28,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\Alejandro\\Documents\\sistemas de informacion 2\\webs\\Maternidad\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
