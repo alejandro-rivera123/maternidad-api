@@ -1,0 +1,1641 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Maternidad",
+    "version": "1.0"
+  },
+  "paths": {
+    "/api/AlertaNeonatal": {
+      "get": {
+        "tags": [
+          "AlertaNeonatal"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "AlertaNeonatal"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AlertaNeonatal"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AlertaNeonatal"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AlertaNeonatal"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/AlertaNeonatal/criticas": {
+      "get": {
+        "tags": [
+          "AlertaNeonatal"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/CasosDeUso/historial-partos": {
+      "get": {
+        "tags": [
+          "CasosDeUso"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/CasosDeUso/seguimiento-prenatal": {
+      "get": {
+        "tags": [
+          "CasosDeUso"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/CasosDeUso/complicaciones-maternas": {
+      "get": {
+        "tags": [
+          "CasosDeUso"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/CasosDeUso/tratamientos-neonatales": {
+      "get": {
+        "tags": [
+          "CasosDeUso"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/CasosDeUso/evaluacion-inicial-neonatal": {
+      "get": {
+        "tags": [
+          "CasosDeUso"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/CasosDeUso/estado-postparto": {
+      "get": {
+        "tags": [
+          "CasosDeUso"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/CasosDeUso/signos-vitales-neonatales": {
+      "get": {
+        "tags": [
+          "CasosDeUso"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/CasosDeUso/alertas-neonatales-activas": {
+      "get": {
+        "tags": [
+          "CasosDeUso"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/CasosDeUso/complicaciones-neonatales": {
+      "get": {
+        "tags": [
+          "CasosDeUso"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/CasosDeUso/recien-nacidos-por-turno/{fecha}": {
+      "get": {
+        "tags": [
+          "CasosDeUso"
+        ],
+        "parameters": [
+          {
+            "name": "fecha",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/ComplicacionMaterna": {
+      "get": {
+        "tags": [
+          "ComplicacionMaterna"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "ComplicacionMaterna"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ComplicacionMaterna"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ComplicacionMaterna"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ComplicacionMaterna"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/ComplicacionMaterna/por-parto/{partoId}": {
+      "get": {
+        "tags": [
+          "ComplicacionMaterna"
+        ],
+        "parameters": [
+          {
+            "name": "partoId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/ComplicacionNeonatal": {
+      "get": {
+        "tags": [
+          "ComplicacionNeonatal"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "ComplicacionNeonatal"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ComplicacionNeonatal"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ComplicacionNeonatal"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ComplicacionNeonatal"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/ComplicacionNeonatal/por-recien-nacido/{id}": {
+      "get": {
+        "tags": [
+          "ComplicacionNeonatal"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Consultas/RecienNacidos": {
+      "get": {
+        "tags": [
+          "Consultas"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Consultas/Conteo": {
+      "get": {
+        "tags": [
+          "Consultas"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Consultas/PesoPorTipoParto": {
+      "get": {
+        "tags": [
+          "Consultas"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Consultas/SeguimientoPorCUO/{ci}": {
+      "get": {
+        "tags": [
+          "Consultas"
+        ],
+        "parameters": [
+          {
+            "name": "ci",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Consultas/PartosSinComplicacion": {
+      "get": {
+        "tags": [
+          "Consultas"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/ControlPrenatal": {
+      "get": {
+        "tags": [
+          "ControlPrenatal"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "ControlPrenatal"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ControlPrenatal"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ControlPrenatal"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ControlPrenatal"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/ControlPrenatal/por-seguimiento/{seguimientoId}": {
+      "get": {
+        "tags": [
+          "ControlPrenatal"
+        ],
+        "parameters": [
+          {
+            "name": "seguimientoId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/EvaluacionInicial": {
+      "get": {
+        "tags": [
+          "EvaluacionInicial"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "EvaluacionInicial"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EvaluacionInicial"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EvaluacionInicial"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/EvaluacionInicial"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/EvaluacionInicial/por-nombre/{nombre}": {
+      "get": {
+        "tags": [
+          "EvaluacionInicial"
+        ],
+        "parameters": [
+          {
+            "name": "nombre",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Partos": {
+      "get": {
+        "tags": [
+          "Partos"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Partos"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Parto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Parto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Parto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Partos/{id}": {
+      "get": {
+        "tags": [
+          "Partos"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Partos/por-ci/{ci}": {
+      "get": {
+        "tags": [
+          "Partos"
+        ],
+        "parameters": [
+          {
+            "name": "ci",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/RecienNacidos": {
+      "get": {
+        "tags": [
+          "RecienNacidos"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "RecienNacidos"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RecienNacido"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RecienNacido"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/RecienNacido"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/RecienNacidos/{id}": {
+      "get": {
+        "tags": [
+          "RecienNacidos"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/RecienNacidos/estado/{estado}": {
+      "get": {
+        "tags": [
+          "RecienNacidos"
+        ],
+        "parameters": [
+          {
+            "name": "estado",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/SeguimientoPrenatals": {
+      "get": {
+        "tags": [
+          "SeguimientoPrenatals"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/SeguimientoPrenatals/por-ci": {
+      "post": {
+        "tags": [
+          "SeguimientoPrenatals"
+        ],
+        "parameters": [
+          {
+            "name": "ci",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/SignoVitalNeonatal": {
+      "get": {
+        "tags": [
+          "SignoVitalNeonatal"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "SignoVitalNeonatal"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SignoVitalNeonatal"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SignoVitalNeonatal"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SignoVitalNeonatal"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/SignoVitalNeonatal/por-recien-nacido/{id}": {
+      "get": {
+        "tags": [
+          "SignoVitalNeonatal"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/TipoSignoPrenatals": {
+      "get": {
+        "tags": [
+          "TipoSignoPrenatals"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/TipoSignoPrenatal"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/TipoSignoPrenatal"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/TipoSignoPrenatal"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "TipoSignoPrenatals"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TipoSignoPrenatal"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TipoSignoPrenatal"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/TipoSignoPrenatal"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/TipoSignoPrenatal"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TipoSignoPrenatal"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TipoSignoPrenatal"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/TipoSignoPrenatals/{id}": {
+      "get": {
+        "tags": [
+          "TipoSignoPrenatals"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/TipoSignoPrenatal"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TipoSignoPrenatal"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TipoSignoPrenatal"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "TipoSignoPrenatals"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TipoSignoPrenatal"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TipoSignoPrenatal"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/TipoSignoPrenatal"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "TipoSignoPrenatals"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/TratamientoNeonatal": {
+      "get": {
+        "tags": [
+          "TratamientoNeonatal"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "TratamientoNeonatal"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TratamientoNeonatal"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TratamientoNeonatal"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/TratamientoNeonatal"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/TratamientoNeonatal/por-recien-nacido/{id}": {
+      "get": {
+        "tags": [
+          "TratamientoNeonatal"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/WeatherForecast": {
+      "get": {
+        "tags": [
+          "WeatherForecast"
+        ],
+        "operationId": "GetWeatherForecast",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/WeatherForecast"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/WeatherForecast"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/WeatherForecast"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "AlertaNeonatal": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "recienNacidoId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "tipoSignoId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "tipoAlerta": {
+            "type": "string",
+            "nullable": true
+          },
+          "descripcion": {
+            "type": "string",
+            "nullable": true
+          },
+          "fechaGenerada": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "recienNacido": {
+            "$ref": "#/components/schemas/RecienNacido"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ComplicacionMaterna": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "partoId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "tipoComplicacion": {
+            "type": "string",
+            "nullable": true
+          },
+          "descripcion": {
+            "type": "string",
+            "nullable": true
+          },
+          "tratamientoAplicado": {
+            "type": "string",
+            "nullable": true
+          },
+          "fechaRegistro": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "parto": {
+            "$ref": "#/components/schemas/Parto"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ComplicacionNeonatal": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "recienNacidoId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "codigoEmpleado": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "tipoComplicacion": {
+            "type": "string",
+            "nullable": true
+          },
+          "descripcion": {
+            "type": "string",
+            "nullable": true
+          },
+          "tratamientoAplicado": {
+            "type": "string",
+            "nullable": true
+          },
+          "fechaRegistro": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "recienNacido": {
+            "$ref": "#/components/schemas/RecienNacido"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ControlPrenatal": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "seguimientoId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "fechaControl": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "semanaGestacion": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "tipoSignoPrenatalId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "valor": {
+            "type": "number",
+            "format": "double"
+          },
+          "seguimiento": {
+            "$ref": "#/components/schemas/SeguimientoPrenatal"
+          },
+          "tipoSigno": {
+            "$ref": "#/components/schemas/TipoSignoPrenatal"
+          }
+        },
+        "additionalProperties": false
+      },
+      "EvaluacionInicial": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "recienNacidoId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "codigoEmpleado": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "apgarMin1": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "apgarMin5": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "fechaEvaluacion": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "recienNacido": {
+            "$ref": "#/components/schemas/RecienNacido"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Paciente": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nombre": {
+            "type": "string",
+            "nullable": true
+          },
+          "apellido": {
+            "type": "string",
+            "nullable": true
+          },
+          "ci": {
+            "type": "string",
+            "nullable": true
+          },
+          "fechaNacimiento": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "sexo": {
+            "type": "string",
+            "nullable": true
+          },
+          "seguimientos": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SeguimientoPrenatal"
+            },
+            "nullable": true
+          },
+          "partos": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Parto"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Parto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "codigoPaciente": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "codigoEmpleado": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "fechaHora": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "tipoParto": {
+            "type": "string",
+            "nullable": true
+          },
+          "anestesia": {
+            "type": "string",
+            "nullable": true
+          },
+          "complicaciones": {
+            "type": "string",
+            "nullable": true
+          },
+          "observaciones": {
+            "type": "string",
+            "nullable": true
+          },
+          "recienNacido": {
+            "$ref": "#/components/schemas/RecienNacido"
+          },
+          "complicacionMaterna": {
+            "$ref": "#/components/schemas/ComplicacionMaterna"
+          },
+          "pacienteId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "paciente": {
+            "$ref": "#/components/schemas/Paciente"
+          }
+        },
+        "additionalProperties": false
+      },
+      "RecienNacido": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "partoId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nombre": {
+            "type": "string",
+            "nullable": true
+          },
+          "codigoPaciente": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "fechaHoraNacimiento": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "pesoGramos": {
+            "type": "number",
+            "format": "double"
+          },
+          "tallaCm": {
+            "type": "number",
+            "format": "double"
+          },
+          "sexo": {
+            "type": "string",
+            "nullable": true
+          },
+          "estado": {
+            "type": "string",
+            "nullable": true
+          },
+          "parto": {
+            "$ref": "#/components/schemas/Parto"
+          },
+          "signosVitales": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SignoVitalNeonatal"
+            },
+            "nullable": true
+          },
+          "tratamientos": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/TratamientoNeonatal"
+            },
+            "nullable": true
+          },
+          "alertas": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AlertaNeonatal"
+            },
+            "nullable": true
+          },
+          "complicaciones": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ComplicacionNeonatal"
+            },
+            "nullable": true
+          },
+          "pacienteId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "paciente": {
+            "$ref": "#/components/schemas/Paciente"
+          }
+        },
+        "additionalProperties": false
+      },
+      "SeguimientoPrenatal": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "codigoPaciente": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "codigoEmpleado": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "fechaInicio": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "estado": {
+            "type": "string",
+            "nullable": true
+          },
+          "partoId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "parto": {
+            "$ref": "#/components/schemas/Parto"
+          },
+          "controles": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ControlPrenatal"
+            },
+            "nullable": true
+          },
+          "paciente": {
+            "$ref": "#/components/schemas/Paciente"
+          },
+          "pacienteId": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "SignoVitalNeonatal": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "recienNacidoId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "tipoSignoId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "codigoEmpleado": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "fechaHora": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "valor": {
+            "type": "number",
+            "format": "double"
+          },
+          "recienNacido": {
+            "$ref": "#/components/schemas/RecienNacido"
+          },
+          "tipoSigno": {
+            "$ref": "#/components/schemas/TipoSignoVitalNeonatal"
+          }
+        },
+        "additionalProperties": false
+      },
+      "TipoSignoPrenatal": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nombre": {
+            "type": "string",
+            "nullable": true
+          },
+          "unidad": {
+            "type": "string",
+            "nullable": true
+          },
+          "valorMin": {
+            "type": "number",
+            "format": "double"
+          },
+          "valorMax": {
+            "type": "number",
+            "format": "double"
+          },
+          "controles": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ControlPrenatal"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "TipoSignoVitalNeonatal": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nombre": {
+            "type": "string",
+            "nullable": true
+          },
+          "unidad": {
+            "type": "string",
+            "nullable": true
+          },
+          "valorMin": {
+            "type": "number",
+            "format": "double"
+          },
+          "valorMax": {
+            "type": "number",
+            "format": "double"
+          },
+          "signos": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SignoVitalNeonatal"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "TratamientoNeonatal": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "recienNacidoId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "codigoEmpleado": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "codigoMedicamento": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "tipoTratamiento": {
+            "type": "string",
+            "nullable": true
+          },
+          "descripcion": {
+            "type": "string",
+            "nullable": true
+          },
+          "fechaInicio": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "fechaFin": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "recienNacido": {
+            "$ref": "#/components/schemas/RecienNacido"
+          }
+        },
+        "additionalProperties": false
+      },
+      "WeatherForecast": {
+        "type": "object",
+        "properties": {
+          "date": {
+            "type": "string",
+            "format": "date"
+          },
+          "temperatureC": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "temperatureF": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "summary": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}
