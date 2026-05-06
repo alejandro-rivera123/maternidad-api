@@ -470,36 +470,55 @@
     <div id="alert-ctrl" class="alert"></div>
 
     <div class="form-card">
-      <h3>Datos del control prenatal</h3>
-      <div class="form-grid">
-        <div class="form-field">
-          <label>ID de seguimiento</label>
-          <input type="number" id="f-seg-id" placeholder="Ej: 1" min="1" />
+        <h3>Datos del control prenatal</h3>
+
+        <div class="form-grid" style="margin-bottom:1rem">
+            <div class="form-field">
+                <label>CI de la paciente</label>
+                <div style="display:flex;gap:8px">
+                    <input type="text" id="f-ci-ctrl" placeholder="Ej: 7654321" style="flex:1" />
+                    <button type="button" onclick="buscarSeguimientoPorCI()"
+                            style="background:var(--teal);color:white;border:none;border-radius:var(--radius);padding:0 1rem;font-family:var(--font-body);font-size:.85rem;cursor:pointer;white-space:nowrap">
+                        Buscar
+                    </button>
+                </div>
+            </div>
+            <div class="form-field">
+                <label>Seguimiento encontrado</label>
+                <input type="text" id="f-seg-info" placeholder="— ingresa el CI y presiona Buscar —"
+                       readonly style="background:var(--gray-1);color:var(--gray-4);cursor:not-allowed" />
+                <input type="hidden" id="f-seg-id" />
+            </div>
         </div>
-        <div class="form-field">
-          <label>ID de cita</label>
-          <input type="number" id="f-cita-id" placeholder="Ej: 101" min="1" />
+
+        <div class="form-grid">
+            <div class="form-field">
+                <label>ID de cita</label>
+                <input type="number" id="f-cita-id" placeholder="Ej: 101" min="1" />
+            </div>
+            <div class="form-field">
+                <label>Fecha de control</label>
+                <input type="date" id="f-fecha" />
+            </div>
+            <div class="form-field">
+                <label>Semana de gestación</label>
+                <input type="number" id="f-semana" placeholder="Ej: 20" min="1" max="45" />
+            </div>
+            <div class="form-field">
+                <label>Tipo de signo prenatal</label>
+                <select id="f-tipo-signo">
+                    <option value="">Cargando tipos…</option>
+                </select>
+            </div>
+            <div class="form-field">
+                <label>Valor medido</label>
+                <input type="number" id="f-valor" placeholder="Ej: 120" step="0.01" />
+            </div>
         </div>
-        <div class="form-field">
-          <label>Fecha de control</label>
-          <input type="date" id="f-fecha" />
-        </div>
-        <div class="form-field">
-          <label>Semana de gestación</label>
-          <input type="number" id="f-semana" placeholder="Ej: 20" min="1" max="45" />
-        </div>
-        <div class="form-field">
-          <label>Tipo de signo prenatal (ID)</label>
-          <select id="f-tipo-signo">
-            <option value="">Cargando tipos…</option>
-          </select>
-        </div>
-        <div class="form-field">
-          <label>Valor medido</label>
-          <input type="number" id="f-valor" placeholder="Ej: 120" step="0.01" />
-        </div>
-      </div>
-      <button class="btn-primary" id="btn-reg-ctrl" onclick="registrarControl()">Registrar control</button>
+
+        <button class="btn-primary" id="btn-reg-ctrl" onclick="registrarControl()">
+            Registrar control
+        </button>
     </div>
   </section>
 
@@ -693,6 +712,34 @@ async function filtrarPorSeguimiento() {
         } finally {
             btn.disabled = false;
             btn.textContent = 'Registrar seguimiento';
+        }
+    }
+    async function buscarSeguimientoPorCI() {
+        const ci = document.getElementById('f-ci-ctrl').value.trim();
+        const infoBox = document.getElementById('f-seg-info');
+        const hiddenId = document.getElementById('f-seg-id');
+
+        if (!ci) {
+            infoBox.value = '⚠ Ingresa un CI primero';
+            return;
+        }
+
+        infoBox.value = 'Buscando…';
+        hiddenId.value = '';
+
+        try {
+            const res = await fetch(`${API}/api/SeguimientoPrenatals/por-ci/${ci}`);
+            if (res.status === 404) {
+                infoBox.value = '✗ No se encontró seguimiento para ese CI';
+                return;
+            }
+            const data = await res.json();
+            // Toma el seguimiento más reciente (último del array)
+            const seg = Array.isArray(data) ? data[data.length - 1] : data;
+            hiddenId.value = seg.id;
+            infoBox.value = `✓ ID ${seg.id} — Estado: ${seg.estado} — Controles: ${seg.total_Controles ?? 0}`;
+        } catch (e) {
+            infoBox.value = '✗ Error de conexión: ' + e.message;
         }
     }
 // ── REGISTRO: nuevo control ──────────────────────────────────────
