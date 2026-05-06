@@ -27,8 +27,11 @@ builder.Services.AddDbContext<MaternidadContext>(options =>
     options.UseNpgsql(connectionString));
 
 // ── Servicios ──
-builder.Services.AddControllers();
-builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddControllers()
+    .ConfigureApiBehaviorOptions(options =>
+    {
+        options.SuppressModelStateInvalidFilter = true;
+    }); builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 // ── CORS ──
