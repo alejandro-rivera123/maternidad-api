@@ -1,823 +1,891 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Sistema Maternidad — Prenatal</title>
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet" />
-<style>
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sistema Maternidad — Prenatal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet" />
+    <style>
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-  :root {
-    --rose: #c2185b;
-    --rose-light: #fce4ec;
-    --rose-dark: #880e4f;
-    --teal: #00897b;
-    --teal-light: #e0f2f1;
-    --teal-dark: #004d40;
-    --amber: #f9a825;
-    --amber-light: #fff8e1;
-    --gray-0: #faf9f7;
-    --gray-1: #f2f0ec;
-    --gray-2: #e5e2db;
-    --gray-3: #a09e98;
-    --gray-4: #5c5a56;
-    --gray-5: #1e1c18;
-    --success: #2e7d32;
-    --danger: #c62828;
-    --font-display: 'Fraunces', Georgia, serif;
-    --font-body: 'DM Sans', sans-serif;
-    --radius: 10px;
-    --radius-lg: 16px;
-    --shadow: 0 1px 3px rgba(0,0,0,.08), 0 4px 16px rgba(0,0,0,.06);
-  }
+        :root {
+            --rose: #c2185b;
+            --rose-light: #fce4ec;
+            --rose-dark: #880e4f;
+            --teal: #00897b;
+            --teal-light: #e0f2f1;
+            --teal-dark: #004d40;
+            --amber: #f9a825;
+            --amber-light: #fff8e1;
+            --gray-0: #faf9f7;
+            --gray-1: #f2f0ec;
+            --gray-2: #e5e2db;
+            --gray-3: #a09e98;
+            --gray-4: #5c5a56;
+            --gray-5: #1e1c18;
+            --success: #2e7d32;
+            --danger: #c62828;
+            --font-display: 'Fraunces', Georgia, serif;
+            --font-body: 'DM Sans', sans-serif;
+            --radius: 10px;
+            --radius-lg: 16px;
+            --shadow: 0 1px 3px rgba(0,0,0,.08), 0 4px 16px rgba(0,0,0,.06);
+        }
 
-  body {
-    font-family: var(--font-body);
-    background: var(--gray-0);
-    color: var(--gray-5);
-    min-height: 100vh;
-  }
+        body {
+            font-family: var(--font-body);
+            background: var(--gray-0);
+            color: var(--gray-5);
+            min-height: 100vh;
+        }
 
-  /* ── Header ── */
-  header {
-    background: var(--rose-dark);
-    color: white;
-    padding: 1.25rem 2rem;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-  }
-  header .logo {
-    font-family: var(--font-display);
-    font-size: 1.5rem;
-    font-weight: 600;
-    letter-spacing: -0.02em;
-  }
-  header .sub {
-    font-size: 0.8rem;
-    opacity: 0.75;
-    margin-top: 1px;
-  }
-  header .dot {
-    width: 36px; height: 36px;
-    background: rgba(255,255,255,0.15);
-    border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 1.1rem;
-  }
+        header {
+            background: var(--rose-dark);
+            color: white;
+            padding: 1.25rem 2rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
 
-  /* ── Nav tabs ── */
-  nav {
-    background: white;
-    border-bottom: 1px solid var(--gray-2);
-    display: flex;
-    padding: 0 2rem;
-  }
-  .tab-btn {
-    font-family: var(--font-body);
-    font-size: 0.875rem;
-    font-weight: 500;
-    padding: 0.875rem 1.25rem;
-    border: none;
-    background: none;
-    color: var(--gray-3);
-    cursor: pointer;
-    border-bottom: 2px solid transparent;
-    transition: color .2s, border-color .2s;
-    white-space: nowrap;
-  }
-  .tab-btn:hover { color: var(--rose); }
-  .tab-btn.active { color: var(--rose); border-bottom-color: var(--rose); }
+            header .logo {
+                font-family: var(--font-display);
+                font-size: 1.5rem;
+                font-weight: 600;
+                letter-spacing: -0.02em;
+            }
 
-  /* ── Main layout ── */
-  main {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 2rem 1.5rem;
-  }
+            header .sub {
+                font-size: 0.8rem;
+                opacity: 0.75;
+                margin-top: 1px;
+            }
 
-  .section { display: none; }
-  .section.active { display: block; }
+            header .dot {
+                width: 36px;
+                height: 36px;
+                background: rgba(255,255,255,0.15);
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 1.1rem;
+            }
 
-  /* ── Section header ── */
-  .section-header {
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-    margin-bottom: 1.5rem;
-    gap: 1rem;
-    flex-wrap: wrap;
-  }
-  .section-title {
-    font-family: var(--font-display);
-    font-size: 1.6rem;
-    font-weight: 600;
-    color: var(--rose-dark);
-    line-height: 1.2;
-  }
-  .section-desc {
-    font-size: 0.85rem;
-    color: var(--gray-3);
-    margin-top: 4px;
-  }
+        nav {
+            background: white;
+            border-bottom: 1px solid var(--gray-2);
+            display: flex;
+            padding: 0 2rem;
+        }
 
-  /* ── Stat cards ── */
-  .stats-row {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-    gap: 12px;
-    margin-bottom: 1.5rem;
-  }
-  .stat-card {
-    background: white;
-    border: 1px solid var(--gray-2);
-    border-radius: var(--radius);
-    padding: 1rem 1.25rem;
-  }
-  .stat-label {
-    font-size: 0.75rem;
-    color: var(--gray-3);
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
-    margin-bottom: 4px;
-  }
-  .stat-value {
-    font-family: var(--font-display);
-    font-size: 1.75rem;
-    font-weight: 600;
-    color: var(--gray-5);
-  }
-  .stat-value.accent { color: var(--rose); }
+        .tab-btn {
+            font-family: var(--font-body);
+            font-size: 0.875rem;
+            font-weight: 500;
+            padding: 0.875rem 1.25rem;
+            border: none;
+            background: none;
+            color: var(--gray-3);
+            cursor: pointer;
+            border-bottom: 2px solid transparent;
+            transition: color .2s, border-color .2s;
+            white-space: nowrap;
+        }
 
-  /* ── Search bar ── */
-  .search-bar {
-    display: flex;
-    gap: 8px;
-    align-items: center;
-    background: white;
-    border: 1px solid var(--gray-2);
-    border-radius: var(--radius);
-    padding: 0.5rem 0.75rem;
-    max-width: 360px;
-    margin-bottom: 1.25rem;
-  }
-  .search-bar input {
-    border: none;
-    outline: none;
-    font-family: var(--font-body);
-    font-size: 0.9rem;
-    color: var(--gray-5);
-    background: transparent;
-    flex: 1;
-  }
-  .search-bar input::placeholder { color: var(--gray-3); }
-  .search-bar button {
-    background: var(--rose);
-    color: white;
-    border: none;
-    border-radius: 6px;
-    padding: 4px 12px;
-    font-size: 0.8rem;
-    cursor: pointer;
-    font-family: var(--font-body);
-  }
-  .search-bar button:hover { background: var(--rose-dark); }
+            .tab-btn:hover {
+                color: var(--rose);
+            }
 
-  /* ── Table ── */
-  .table-wrap {
-    background: white;
-    border: 1px solid var(--gray-2);
-    border-radius: var(--radius-lg);
-    overflow: hidden;
-    box-shadow: var(--shadow);
-  }
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 0.875rem;
-  }
-  thead {
-    background: var(--gray-1);
-  }
-  th {
-    text-align: left;
-    padding: 0.75rem 1rem;
-    font-size: 0.75rem;
-    font-weight: 500;
-    color: var(--gray-3);
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
-    border-bottom: 1px solid var(--gray-2);
-  }
-  td {
-    padding: 0.75rem 1rem;
-    border-bottom: 1px solid var(--gray-1);
-    color: var(--gray-5);
-    vertical-align: middle;
-  }
-  tr:last-child td { border-bottom: none; }
-  tr:hover td { background: var(--gray-0); }
+            .tab-btn.active {
+                color: var(--rose);
+                border-bottom-color: var(--rose);
+            }
 
-  /* ── Badges ── */
-  .badge {
-    display: inline-block;
-    padding: 2px 10px;
-    border-radius: 99px;
-    font-size: 0.75rem;
-    font-weight: 500;
-  }
-  .badge-green { background: #e8f5e9; color: #2e7d32; }
-  .badge-amber { background: var(--amber-light); color: #795f00; }
-  .badge-red   { background: #ffebee; color: var(--danger); }
-  .badge-teal  { background: var(--teal-light); color: var(--teal-dark); }
-  .badge-rose  { background: var(--rose-light); color: var(--rose-dark); }
+        main {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+        }
 
-  /* ── Form card ── */
-  .form-card {
-    background: white;
-    border: 1px solid var(--gray-2);
-    border-radius: var(--radius-lg);
-    padding: 1.5rem;
-    box-shadow: var(--shadow);
-    margin-bottom: 2rem;
-  }
-  .form-card h3 {
-    font-family: var(--font-display);
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: var(--rose-dark);
-    margin-bottom: 1.25rem;
-    padding-bottom: 0.75rem;
-    border-bottom: 1px solid var(--gray-2);
-  }
-  .form-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
-  }
-  .form-field label {
-    display: block;
-    font-size: 0.8rem;
-    font-weight: 500;
-    color: var(--gray-4);
-    margin-bottom: 5px;
-  }
-  .form-field input, .form-field select {
-    width: 100%;
-    border: 1px solid var(--gray-2);
-    border-radius: var(--radius);
-    padding: 0.55rem 0.75rem;
-    font-family: var(--font-body);
-    font-size: 0.9rem;
-    color: var(--gray-5);
-    outline: none;
-    transition: border-color .2s;
-    background: white;
-  }
-  .form-field input:focus, .form-field select:focus {
-    border-color: var(--rose);
-    box-shadow: 0 0 0 3px rgba(194,24,91,0.1);
-  }
-  .btn-primary {
-    background: var(--rose);
-    color: white;
-    border: none;
-    border-radius: var(--radius);
-    padding: 0.6rem 1.5rem;
-    font-family: var(--font-body);
-    font-size: 0.9rem;
-    font-weight: 500;
-    cursor: pointer;
-    transition: background .2s;
-    margin-top: 1rem;
-  }
-  .btn-primary:hover { background: var(--rose-dark); }
-  .btn-primary:disabled { background: var(--gray-3); cursor: not-allowed; }
+        .section {
+            display: none;
+        }
 
-  /* ── State messages ── */
-  .state-msg {
-    text-align: center;
-    padding: 2.5rem 1rem;
-    color: var(--gray-3);
-    font-size: 0.9rem;
-  }
-  .state-msg .icon { font-size: 2rem; margin-bottom: 8px; }
+            .section.active {
+                display: block;
+            }
 
-  /* ── Alert strip ── */
-  .alert {
-    padding: 0.75rem 1rem;
-    border-radius: var(--radius);
-    font-size: 0.875rem;
-    margin-bottom: 1rem;
-    display: none;
-  }
-  .alert.show { display: block; }
-  .alert-success { background: #e8f5e9; color: var(--success); border: 1px solid #a5d6a7; }
-  .alert-error   { background: #ffebee; color: var(--danger); border: 1px solid #ef9a9a; }
+        .section-header {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            margin-bottom: 1.5rem;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
 
-  /* ── Fuera de rango highlight ── */
-  td.out-of-range { color: var(--danger); font-weight: 500; }
+        .section-title {
+            font-family: var(--font-display);
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: var(--rose-dark);
+            line-height: 1.2;
+        }
 
-  @media (max-width: 600px) {
-    header { padding: 1rem; }
-    main { padding: 1rem; }
-    .section-title { font-size: 1.3rem; }
-    nav { padding: 0 1rem; overflow-x: auto; }
-    th, td { padding: 0.6rem 0.75rem; }
-  }
-</style>
+        .section-desc {
+            font-size: 0.85rem;
+            color: var(--gray-3);
+            margin-top: 4px;
+        }
+
+        .stats-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 12px;
+            margin-bottom: 1.5rem;
+        }
+
+        .stat-card {
+            background: white;
+            border: 1px solid var(--gray-2);
+            border-radius: var(--radius);
+            padding: 1rem 1.25rem;
+        }
+
+        .stat-label {
+            font-size: 0.75rem;
+            color: var(--gray-3);
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            margin-bottom: 4px;
+        }
+
+        .stat-value {
+            font-family: var(--font-display);
+            font-size: 1.75rem;
+            font-weight: 600;
+            color: var(--gray-5);
+        }
+
+            .stat-value.accent {
+                color: var(--rose);
+            }
+
+        .search-bar {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            background: white;
+            border: 1px solid var(--gray-2);
+            border-radius: var(--radius);
+            padding: 0.5rem 0.75rem;
+            max-width: 360px;
+            margin-bottom: 1.25rem;
+        }
+
+            .search-bar input {
+                border: none;
+                outline: none;
+                font-family: var(--font-body);
+                font-size: 0.9rem;
+                color: var(--gray-5);
+                background: transparent;
+                flex: 1;
+            }
+
+                .search-bar input::placeholder {
+                    color: var(--gray-3);
+                }
+
+            .search-bar button {
+                background: var(--rose);
+                color: white;
+                border: none;
+                border-radius: 6px;
+                padding: 4px 12px;
+                font-size: 0.8rem;
+                cursor: pointer;
+                font-family: var(--font-body);
+            }
+
+                .search-bar button:hover {
+                    background: var(--rose-dark);
+                }
+
+        .table-wrap {
+            background: white;
+            border: 1px solid var(--gray-2);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.875rem;
+        }
+
+        thead {
+            background: var(--gray-1);
+        }
+
+        th {
+            text-align: left;
+            padding: 0.75rem 1rem;
+            font-size: 0.75rem;
+            font-weight: 500;
+            color: var(--gray-3);
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            border-bottom: 1px solid var(--gray-2);
+        }
+
+        td {
+            padding: 0.75rem 1rem;
+            border-bottom: 1px solid var(--gray-1);
+            color: var(--gray-5);
+            vertical-align: middle;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        tr:hover td {
+            background: var(--gray-0);
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 2px 10px;
+            border-radius: 99px;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+
+        .badge-green {
+            background: #e8f5e9;
+            color: #2e7d32;
+        }
+
+        .badge-amber {
+            background: var(--amber-light);
+            color: #795f00;
+        }
+
+        .badge-red {
+            background: #ffebee;
+            color: var(--danger);
+        }
+
+        .badge-teal {
+            background: var(--teal-light);
+            color: var(--teal-dark);
+        }
+
+        .badge-rose {
+            background: var(--rose-light);
+            color: var(--rose-dark);
+        }
+
+        .form-card {
+            background: white;
+            border: 1px solid var(--gray-2);
+            border-radius: var(--radius-lg);
+            padding: 1.5rem;
+            box-shadow: var(--shadow);
+            margin-bottom: 2rem;
+        }
+
+            .form-card h3 {
+                font-family: var(--font-display);
+                font-size: 1.1rem;
+                font-weight: 600;
+                color: var(--rose-dark);
+                margin-bottom: 1.25rem;
+                padding-bottom: 0.75rem;
+                border-bottom: 1px solid var(--gray-2);
+            }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .form-field label {
+            display: block;
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: var(--gray-4);
+            margin-bottom: 5px;
+        }
+
+        .form-field input, .form-field select {
+            width: 100%;
+            border: 1px solid var(--gray-2);
+            border-radius: var(--radius);
+            padding: 0.55rem 0.75rem;
+            font-family: var(--font-body);
+            font-size: 0.9rem;
+            color: var(--gray-5);
+            outline: none;
+            transition: border-color .2s;
+            background: white;
+        }
+
+            .form-field input:focus, .form-field select:focus {
+                border-color: var(--rose);
+                box-shadow: 0 0 0 3px rgba(194,24,91,0.1);
+            }
+
+        .input-readonly {
+            background: var(--gray-1) !important;
+            color: var(--gray-4) !important;
+            cursor: not-allowed !important;
+        }
+
+        .btn-primary {
+            background: var(--rose);
+            color: white;
+            border: none;
+            border-radius: var(--radius);
+            padding: 0.6rem 1.5rem;
+            font-family: var(--font-body);
+            font-size: 0.9rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background .2s;
+            margin-top: 1rem;
+        }
+
+            .btn-primary:hover {
+                background: var(--rose-dark);
+            }
+
+            .btn-primary:disabled {
+                background: var(--gray-3);
+                cursor: not-allowed;
+            }
+
+        .btn-teal {
+            background: var(--teal);
+            color: white;
+            border: none;
+            border-radius: var(--radius);
+            padding: 0.55rem 1rem;
+            font-family: var(--font-body);
+            font-size: 0.85rem;
+            cursor: pointer;
+            white-space: nowrap;
+        }
+
+            .btn-teal:hover {
+                background: var(--teal-dark);
+            }
+
+        .state-msg {
+            text-align: center;
+            padding: 2.5rem 1rem;
+            color: var(--gray-3);
+            font-size: 0.9rem;
+        }
+
+            .state-msg .icon {
+                font-size: 2rem;
+                margin-bottom: 8px;
+            }
+
+        .alert {
+            padding: 0.75rem 1rem;
+            border-radius: var(--radius);
+            font-size: 0.875rem;
+            margin-bottom: 1rem;
+            display: none;
+        }
+
+            .alert.show {
+                display: block;
+            }
+
+        .alert-success {
+            background: #e8f5e9;
+            color: var(--success);
+            border: 1px solid #a5d6a7;
+        }
+
+        .alert-error {
+            background: #ffebee;
+            color: var(--danger);
+            border: 1px solid #ef9a9a;
+        }
+
+        td.out-of-range {
+            color: var(--danger);
+            font-weight: 500;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                padding: 1rem;
+            }
+
+            main {
+                padding: 1rem;
+            }
+
+            .section-title {
+                font-size: 1.3rem;
+            }
+
+            nav {
+                padding: 0 1rem;
+                overflow-x: auto;
+            }
+
+            th, td {
+                padding: 0.6rem 0.75rem;
+            }
+        }
+    </style>
 </head>
 <body>
 
-<header>
-  <div class="dot">♡</div>
-  <div>
-    <div class="logo">Maternidad</div>
-    <div class="sub">Sistema de gestión prenatal</div>
-  </div>
-</header>
-
-<nav>
-  <button class="tab-btn active" onclick="showTab('seguimiento')">Seguimiento Prenatal</button>
-  <button class="tab-btn" onclick="showTab('control')">Control Prenatal</button>
-  <button class="tab-btn" onclick="showTab('registro')">Nuevo Seguimiento</button>
-  <button class="tab-btn" onclick="showTab('regcontrol')">Nuevo Control</button>
-</nav>
-
-<main>
-
-  <!-- ══════════ TAB: SEGUIMIENTO ══════════ -->
-  <section id="tab-seguimiento" class="section active">
-    <div class="section-header">
-      <div>
-        <div class="section-title">Seguimientos prenatales</div>
-        <div class="section-desc">Listado de seguimientos registrados en el sistema</div>
-      </div>
-      <button class="btn-primary" onclick="loadSeguimientos()">↺ Actualizar</button>
-    </div>
-
-    <div class="stats-row" id="stats-seguimiento">
-      <div class="stat-card"><div class="stat-label">Total</div><div class="stat-value accent" id="s-total">—</div></div>
-      <div class="stat-card"><div class="stat-label">Completados</div><div class="stat-value" id="s-completado">—</div></div>
-      <div class="stat-card"><div class="stat-label">Activos</div><div class="stat-value" id="s-activo">—</div></div>
-      <div class="stat-card"><div class="stat-label">Promedio controles</div><div class="stat-value" id="s-avg">—</div></div>
-    </div>
-
-    <div class="search-bar">
-      <input type="text" id="ci-buscar" placeholder="Buscar por CI de paciente…" />
-      <button onclick="buscarPorCI()">Buscar</button>
-    </div>
-
-    <div class="table-wrap">
-      <table>
-        <thead>
-          <tr>
-            <th>CI Paciente</th>
-            <th>CI Empleado</th>
-            <th>Fecha inicio</th>
-            <th>Estado</th>
-            <th>Controles</th>
-            <th>Último control</th>
-          </tr>
-        </thead>
-        <tbody id="tbody-seguimiento">
-          <tr><td colspan="6"><div class="state-msg"><div class="icon">⏳</div>Cargando datos…</div></td></tr>
-        </tbody>
-      </table>
-    </div>
-  </section>
-
-  <!-- ══════════ TAB: CONTROL PRENATAL ══════════ -->
-  <section id="tab-control" class="section">
-    <div class="section-header">
-      <div>
-        <div class="section-title">Controles prenatales</div>
-        <div class="section-desc">Signos vitales y mediciones por seguimiento</div>
-      </div>
-      <button class="btn-primary" onclick="loadControles()">↺ Actualizar</button>
-    </div>
-
-    <div class="stats-row">
-      <div class="stat-card"><div class="stat-label">Total controles</div><div class="stat-value accent" id="c-total">—</div></div>
-      <div class="stat-card"><div class="stat-label">Fuera de rango</div><div class="stat-value" id="c-fuera" style="color:var(--danger)">—</div></div>
-      <div class="stat-card"><div class="stat-label">Pacientes distintos</div><div class="stat-value" id="c-pacs">—</div></div>
-    </div>
-
-    <div class="search-bar">
-      <input type="number" id="seg-id" placeholder="Filtrar por ID de seguimiento…" min="1" />
-      <button onclick="filtrarPorSeguimiento()">Filtrar</button>
-    </div>
-
-    <div class="table-wrap">
-      <table>
-        <thead>
-          <tr>
-            <th>CI Paciente</th>
-            <th>Semana gest.</th>
-            <th>Fecha control</th>
-            <th>Signo</th>
-            <th>Valor</th>
-            <th>Unidad</th>
-            <th>Rango</th>
-            <th>Estado</th>
-          </tr>
-        </thead>
-        <tbody id="tbody-control">
-          <tr><td colspan="8"><div class="state-msg"><div class="icon">⏳</div>Cargando datos…</div></td></tr>
-        </tbody>
-      </table>
-    </div>
-  </section>
-
-  <!-- ══════════ TAB: NUEVO SEGUIMIENTO ══════════ -->
-  <section id="tab-registro" class="section">
-    <div class="section-header">
-      <div>
-        <div class="section-title">Registrar seguimiento</div>
-        <div class="section-desc">Iniciar un nuevo seguimiento prenatal para una paciente</div>
-      </div>
-    </div>
-
-    <div id="alert-seg" class="alert"></div>
-
-    <div class="form-card">
-      <h3>Datos del seguimiento</h3>
-      <div class="form-grid">
-        <div class="form-field">
-          <label>CI de la paciente</label>
-          <input type="text" id="f-ci-paciente" placeholder="Ej: 7654321" />
+    <header>
+        <div class="dot">♡</div>
+        <div>
+            <div class="logo">Maternidad</div>
+            <div class="sub">Sistema de gestión prenatal</div>
         </div>
-        <div class="form-field">
-          <label>CI del empleado</label>
-          <input type="text" id="f-ci-empleado" placeholder="Ej: 1234567" />
-        </div>
-      </div>
-      <button class="btn-primary" id="btn-reg-seg" onclick="registrarSeguimiento()">Registrar seguimiento</button>
-    </div>
-  </section>
+    </header>
 
-  <!-- ══════════ TAB: NUEVO CONTROL ══════════ -->
-  <section id="tab-regcontrol" class="section">
-    <div class="section-header">
-      <div>
-        <div class="section-title">Registrar control</div>
-        <div class="section-desc">Añadir un nuevo signo vital o medición a un seguimiento existente</div>
-      </div>
-    </div>
+    <nav>
+        <button class="tab-btn active" onclick="showTab('seguimiento', this)">Seguimiento Prenatal</button>
+        <button class="tab-btn" onclick="showTab('control', this)">Control Prenatal</button>
+        <button class="tab-btn" onclick="showTab('registro', this)">Nuevo Seguimiento</button>
+        <button class="tab-btn" onclick="showTab('regcontrol', this)">Nuevo Control</button>
+    </nav>
 
-    <div id="alert-ctrl" class="alert"></div>
+    <main>
 
-    <div class="form-card">
-        <h3>Datos del control prenatal</h3>
+        <!-- SEGUIMIENTO -->
+        <section id="tab-seguimiento" class="section active">
+            <div class="section-header">
+                <div>
+                    <div class="section-title">Seguimientos prenatales</div>
+                    <div class="section-desc">Listado de seguimientos registrados en el sistema</div>
+                </div>
+                <button class="btn-primary" onclick="loadSeguimientos()">↺ Actualizar</button>
+            </div>
+            <div class="stats-row">
+                <div class="stat-card"><div class="stat-label">Total</div><div class="stat-value accent" id="s-total">—</div></div>
+                <div class="stat-card"><div class="stat-label">Completados</div><div class="stat-value" id="s-completado">—</div></div>
+                <div class="stat-card"><div class="stat-label">Activos</div><div class="stat-value" id="s-activo">—</div></div>
+                <div class="stat-card"><div class="stat-label">Promedio controles</div><div class="stat-value" id="s-avg">—</div></div>
+            </div>
+            <div class="search-bar">
+                <input type="text" id="ci-buscar" placeholder="Buscar por CI de paciente…" onkeydown="if(event.key==='Enter') buscarPorCI()" />
+                <button onclick="buscarPorCI()">Buscar</button>
+            </div>
+            <div class="table-wrap">
+                <table>
+                    <thead><tr><th>CI Paciente</th><th>CI Empleado</th><th>Fecha inicio</th><th>Estado</th><th>Controles</th><th>Último control</th></tr></thead>
+                    <tbody id="tbody-seguimiento">
+                        <tr><td colspan="6"><div class="state-msg"><div class="icon">⏳</div>Cargando datos…</div></td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
 
-        <div class="form-grid" style="margin-bottom:1rem">
-            <div class="form-field">
-                <label>CI de la paciente</label>
-                <div style="display:flex;gap:8px">
-                    <input type="text" id="f-ci-ctrl" placeholder="Ej: 7654321" style="flex:1" />
-                    <button type="button" onclick="buscarSeguimientoPorCI()"
-                            style="background:var(--teal);color:white;border:none;border-radius:var(--radius);padding:0 1rem;font-family:var(--font-body);font-size:.85rem;cursor:pointer;white-space:nowrap">
-                        Buscar
-                    </button>
+        <!-- CONTROL PRENATAL -->
+        <section id="tab-control" class="section">
+            <div class="section-header">
+                <div>
+                    <div class="section-title">Controles prenatales</div>
+                    <div class="section-desc">Signos vitales y mediciones por seguimiento</div>
+                </div>
+                <button class="btn-primary" onclick="loadControles()">↺ Actualizar</button>
+            </div>
+            <div class="stats-row">
+                <div class="stat-card"><div class="stat-label">Total controles</div><div class="stat-value accent" id="c-total">—</div></div>
+                <div class="stat-card"><div class="stat-label">Fuera de rango</div><div class="stat-value" id="c-fuera" style="color:var(--danger)">—</div></div>
+                <div class="stat-card"><div class="stat-label">Pacientes distintos</div><div class="stat-value" id="c-pacs">—</div></div>
+            </div>
+            <div class="search-bar">
+                <input type="number" id="seg-id-filtro" placeholder="Filtrar por ID de seguimiento…" min="1" onkeydown="if(event.key==='Enter') filtrarPorSeguimiento()" />
+                <button onclick="filtrarPorSeguimiento()">Filtrar</button>
+            </div>
+            <div class="table-wrap">
+                <table>
+                    <thead><tr><th>CI Paciente</th><th>Semana gest.</th><th>Fecha control</th><th>Signo</th><th>Valor</th><th>Unidad</th><th>Rango</th><th>Estado</th></tr></thead>
+                    <tbody id="tbody-control">
+                        <tr><td colspan="8"><div class="state-msg"><div class="icon">⏳</div>Cargando datos…</div></td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- NUEVO SEGUIMIENTO -->
+        <section id="tab-registro" class="section">
+            <div class="section-header">
+                <div>
+                    <div class="section-title">Registrar seguimiento</div>
+                    <div class="section-desc">Iniciar un nuevo seguimiento prenatal para una paciente</div>
                 </div>
             </div>
-            <div class="form-field">
-                <label>Seguimiento encontrado</label>
-                <input type="text" id="f-seg-info" placeholder="— ingresa el CI y presiona Buscar —"
-                       readonly style="background:var(--gray-1);color:var(--gray-4);cursor:not-allowed" />
-                <input type="hidden" id="f-seg-id" />
+            <div id="alert-seg" class="alert"></div>
+            <div class="form-card">
+                <h3>Datos del seguimiento</h3>
+                <div class="form-grid">
+                    <div class="form-field">
+                        <label>CI de la paciente</label>
+                        <input type="text" id="f-ci-paciente" placeholder="Ej: 7654321" />
+                    </div>
+                    <div class="form-field">
+                        <label>CI del empleado</label>
+                        <input type="text" id="f-ci-empleado" placeholder="Ej: 1234567" />
+                    </div>
+                </div>
+                <button class="btn-primary" id="btn-reg-seg" onclick="registrarSeguimiento()">Registrar seguimiento</button>
             </div>
-        </div>
+        </section>
 
-        <div class="form-grid">
-            <div class="form-field">
-                <label>ID de cita</label>
-                <input type="number" id="f-cita-id" placeholder="Ej: 101" min="1" />
+        <!-- NUEVO CONTROL -->
+        <section id="tab-regcontrol" class="section">
+            <div class="section-header">
+                <div>
+                    <div class="section-title">Registrar control</div>
+                    <div class="section-desc">Añadir un nuevo signo vital o medición a un seguimiento existente</div>
+                </div>
             </div>
-            <div class="form-field">
-                <label>Fecha de control</label>
-                <input type="date" id="f-fecha" />
+            <div id="alert-ctrl" class="alert"></div>
+            <div class="form-card">
+                <h3>Datos del control prenatal</h3>
+
+                <div class="form-grid" style="margin-bottom:1.25rem">
+                    <div class="form-field">
+                        <label>CI de la paciente</label>
+                        <div style="display:flex;gap:8px;align-items:stretch">
+                            <input type="text" id="f-ci-ctrl" placeholder="Ej: 7654321" style="flex:1" onkeydown="if(event.key==='Enter') buscarSeguimientoPorCI()" />
+                            <button class="btn-teal" onclick="buscarSeguimientoPorCI()">Buscar</button>
+                        </div>
+                    </div>
+                    <div class="form-field">
+                        <label>Seguimiento encontrado</label>
+                        <input type="text" id="f-seg-info" class="input-readonly" placeholder="— ingresa el CI y presiona Buscar —" readonly />
+                        <input type="hidden" id="f-seg-id" />
+                    </div>
+                </div>
+
+                <div class="form-grid">
+                    <div class="form-field">
+                        <label>ID de cita</label>
+                        <input type="number" id="f-cita-id" placeholder="Ej: 101" min="1" />
+                    </div>
+                    <div class="form-field">
+                        <label>Fecha de control</label>
+                        <input type="date" id="f-fecha" />
+                    </div>
+                    <div class="form-field">
+                        <label>Semana de gestación</label>
+                        <input type="number" id="f-semana" placeholder="Ej: 20" min="1" max="45" />
+                    </div>
+                    <div class="form-field">
+                        <label>Tipo de signo prenatal</label>
+                        <select id="f-tipo-signo">
+                            <option value="">Cargando tipos…</option>
+                        </select>
+                    </div>
+                    <div class="form-field">
+                        <label>Valor medido</label>
+                        <input type="number" id="f-valor" placeholder="Ej: 120" step="0.01" />
+                    </div>
+                </div>
+
+                <button class="btn-primary" id="btn-reg-ctrl" onclick="registrarControl()">Registrar control</button>
             </div>
-            <div class="form-field">
-                <label>Semana de gestación</label>
-                <input type="number" id="f-semana" placeholder="Ej: 20" min="1" max="45" />
-            </div>
-            <div class="form-field">
-                <label>Tipo de signo prenatal</label>
-                <select id="f-tipo-signo">
-                    <option value="">Cargando tipos…</option>
-                </select>
-            </div>
-            <div class="form-field">
-                <label>Valor medido</label>
-                <input type="number" id="f-valor" placeholder="Ej: 120" step="0.01" />
-            </div>
-        </div>
+        </section>
 
-        <button class="btn-primary" id="btn-reg-ctrl" onclick="registrarControl()">
-            Registrar control
-        </button>
-    </div>
-  </section>
+    </main>
 
-</main>
+    <script>
+        const API = 'https://maternidad-api.onrender.com';
 
-<script>
-const API = 'https://maternidad-api.onrender.com';
-
-// ── Tab navigation ──────────────────────────────────────────────
-function showTab(name) {
-  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
-  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-  document.getElementById('tab-' + name).classList.add('active');
-  event.currentTarget.classList.add('active');
-}
-
-// ── Formatters ──────────────────────────────────────────────────
-function fmtDate(iso) {
-  if (!iso) return '—';
-  const d = new Date(iso);
-  return d.toLocaleDateString('es-BO', { day: '2-digit', month: 'short', year: 'numeric' });
-}
-
-function estadoBadge(e) {
-  if (!e) return '';
-  const map = { completado: 'badge-green', activo: 'badge-teal', pendiente: 'badge-amber', cancelado: 'badge-red' };
-  const cls = map[(e || '').toLowerCase()] || 'badge-rose';
-  return `<span class="badge ${cls}">${e}</span>`;
-}
-
-// ── SEGUIMIENTO: load all ────────────────────────────────────────
-async function loadSeguimientos(data) {
-  const tbody = document.getElementById('tbody-seguimiento');
-  tbody.innerHTML = `<tr><td colspan="6"><div class="state-msg"><div class="icon">⏳</div>Cargando…</div></td></tr>`;
-  try {
-    if (!data) {
-      const res = await fetch(`${API}/api/SeguimientoPrenatals`);
-      data = await res.json();
-    }
-    if (!data.length) {
-      tbody.innerHTML = `<tr><td colspan="6"><div class="state-msg"><div class="icon">🔍</div>Sin resultados</div></td></tr>`;
-      return;
-    }
-    // Stats
-    const completados = data.filter(r => (r.estado||'').toLowerCase() === 'completado').length;
-    const activos     = data.filter(r => (r.estado||'').toLowerCase() === 'activo').length;
-    const avgCtrl     = data.reduce((a, r) => a + (r.total_Controles || 0), 0) / data.length;
-    document.getElementById('s-total').textContent      = data.length;
-    document.getElementById('s-completado').textContent = completados;
-    document.getElementById('s-activo').textContent     = activos;
-    document.getElementById('s-avg').textContent        = avgCtrl.toFixed(1);
-
-    tbody.innerHTML = data.map(r => `
-      <tr>
-        <td><strong>${r.ciPaciente || '—'}</strong></td>
-        <td>${r.ciEmpleado || '—'}</td>
-        <td>${fmtDate(r.fechaInicio)}</td>
-        <td>${estadoBadge(r.estado)}</td>
-        <td style="text-align:center">${r.total_Controles ?? 0}</td>
-        <td>${fmtDate(r.ultimo_Control)}</td>
-      </tr>
-    `).join('');
-  } catch (e) {
-    tbody.innerHTML = `<tr><td colspan="6"><div class="state-msg"><div class="icon">⚠️</div>Error al conectar con la API. ${e.message}</div></td></tr>`;
-  }
-}
-
-// ── SEGUIMIENTO: buscar por CI ───────────────────────────────────
-async function buscarPorCI() {
-  const ci = document.getElementById('ci-buscar').value.trim();
-  if (!ci) { loadSeguimientos(); return; }
-  const tbody = document.getElementById('tbody-seguimiento');
-  tbody.innerHTML = `<tr><td colspan="6"><div class="state-msg"><div class="icon">⏳</div>Buscando…</div></td></tr>`;
-  try {
-    const res = await fetch(`${API}/api/SeguimientoPrenatals/por-ci/${ci}`);
-    if (res.status === 404) {
-      tbody.innerHTML = `<tr><td colspan="6"><div class="state-msg"><div class="icon">🔍</div>No se encontraron seguimientos para CI: ${ci}</div></td></tr>`;
-      return;
-    }
-    const data = await res.json();
-    loadSeguimientos(Array.isArray(data) ? data : [data]);
-  } catch (e) {
-    tbody.innerHTML = `<tr><td colspan="6"><div class="state-msg"><div class="icon">⚠️</div>${e.message}</div></td></tr>`;
-  }
-}
-
-// ── CONTROL: load all ────────────────────────────────────────────
-async function loadControles(data) {
-  const tbody = document.getElementById('tbody-control');
-  tbody.innerHTML = `<tr><td colspan="8"><div class="state-msg"><div class="icon">⏳</div>Cargando…</div></td></tr>`;
-  try {
-    if (!data) {
-      const res = await fetch(`${API}/api/ControlPrenatal`);
-      data = await res.json();
-    }
-    if (!data.length) {
-      tbody.innerHTML = `<tr><td colspan="8"><div class="state-msg"><div class="icon">🔍</div>Sin resultados</div></td></tr>`;
-      return;
-    }
-    const fueraDeRango = data.filter(r => r.fuera_de_Rango).length;
-    const pacs = new Set(data.map(r => r.ciPaciente)).size;
-    document.getElementById('c-total').textContent = data.length;
-    document.getElementById('c-fuera').textContent = fueraDeRango;
-    document.getElementById('c-pacs').textContent  = pacs;
-
-    tbody.innerHTML = data.map(r => {
-      const fuera = r.fuera_de_Rango;
-      const rango = r.rango_Normal || (r.valorMin != null ? `${r.valorMin} – ${r.valorMax}` : '—');
-      return `
-        <tr>
-          <td>${r.ciPaciente || '—'}</td>
-          <td style="text-align:center">${r.semanaGestacion ?? '—'}</td>
-          <td>${fmtDate(r.fechaControl)}</td>
-          <td>${r.tipo_Signo || r.tipoSigno || '—'}</td>
-          <td class="${fuera ? 'out-of-range' : ''}">${r.valor ?? '—'}</td>
-          <td>${r.unidad || '—'}</td>
-          <td style="font-size:.8rem;color:var(--gray-3)">${rango}</td>
-          <td>${fuera
-            ? '<span class="badge badge-red">Fuera de rango</span>'
-            : '<span class="badge badge-green">Normal</span>'}</td>
-        </tr>
-      `;
-    }).join('');
-  } catch (e) {
-    tbody.innerHTML = `<tr><td colspan="8"><div class="state-msg"><div class="icon">⚠️</div>Error: ${e.message}</div></td></tr>`;
-  }
-}
-
-// ── CONTROL: filtrar por seguimientoId ───────────────────────────
-async function filtrarPorSeguimiento() {
-  const id = document.getElementById('seg-id').value.trim();
-  if (!id) { loadControles(); return; }
-  const tbody = document.getElementById('tbody-control');
-  tbody.innerHTML = `<tr><td colspan="8"><div class="state-msg"><div class="icon">⏳</div>Buscando…</div></td></tr>`;
-  try {
-    const res = await fetch(`${API}/api/ControlPrenatal/por-seguimiento/${id}`);
-    if (res.status === 404) {
-      tbody.innerHTML = `<tr><td colspan="8"><div class="state-msg"><div class="icon">🔍</div>Sin controles para seguimiento ID: ${id}</div></td></tr>`;
-      return;
-    }
-    const data = await res.json();
-    loadControles(Array.isArray(data) ? data : [data]);
-  } catch (e) {
-    tbody.innerHTML = `<tr><td colspan="8"><div class="state-msg"><div class="icon">⚠️</div>${e.message}</div></td></tr>`;
-  }
-}
-
-// ── REGISTRO: nuevo seguimiento ──────────────────────────────────
-    async function registrarSeguimiento() {
-        const btn = document.getElementById('btn-reg-seg');
-        const alertEl = document.getElementById('alert-seg');
-        const ciPac = document.getElementById('f-ci-paciente').value.trim();
-        const ciEmp = document.getElementById('f-ci-empleado').value.trim();
-
-        if (!ciPac || !ciEmp) {
-            showAlert(alertEl, 'error', 'Por favor completa los dos campos.');
-            return;
+        function showTab(name, btn) {
+            document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            document.getElementById('tab-' + name).classList.add('active');
+            btn.classList.add('active');
         }
 
-        btn.disabled = true;
-        btn.textContent = 'Registrando…';
+        function fmtDate(iso) {
+            if (!iso) return '—';
+            return new Date(iso).toLocaleDateString('es-BO', { day: '2-digit', month: 'short', year: 'numeric' });
+        }
 
-        try {
-            const res = await fetch(`${API}/api/SeguimientoPrenatals`, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    CIPaciente: ciPac,
-                    CIEmpleado: ciEmp,
-                    PartoId: null
-                })
-            });
+        function estadoBadge(e) {
+            if (!e) return '';
+            const map = { completado: 'badge-green', activo: 'badge-teal', pendiente: 'badge-amber', cancelado: 'badge-red' };
+            const cls = map[(e).toLowerCase()] || 'badge-rose';
+            return `<span class="badge ${cls}">${e}</span>`;
+        }
 
-            const text = await res.text();
-            let data = {};
-            try { data = JSON.parse(text); } catch { }
+        function showAlert(id, type, msg) {
+            const el = document.getElementById(id);
+            el.className = `alert alert-${type} show`;
+            el.textContent = msg;
+            setTimeout(() => el.classList.remove('show'), 6000);
+        }
 
-            if (res.ok) {
-                showAlert(alertEl, 'success',
-                    `✓ Seguimiento registrado — CI: ${data.ciPaciente || ciPac}, Estado: ${data.estado || 'Activo'}`
-                );
-                document.getElementById('f-ci-paciente').value = '';
-                document.getElementById('f-ci-empleado').value = '';
-            } else {
-                showAlert(alertEl, 'error',
-                    data.mensaje || data.title || `Error ${res.status}: ${text.slice(0, 120)}`
-                );
+        async function loadSeguimientos(data) {
+            const tbody = document.getElementById('tbody-seguimiento');
+            tbody.innerHTML = `<tr><td colspan="6"><div class="state-msg"><div class="icon">⏳</div>Cargando…</div></td></tr>`;
+            try {
+                if (!data) {
+                    const res = await fetch(`${API}/api/SeguimientoPrenatals`);
+                    data = await res.json();
+                }
+                if (!data.length) {
+                    tbody.innerHTML = `<tr><td colspan="6"><div class="state-msg"><div class="icon">🔍</div>Sin resultados</div></td></tr>`;
+                    return;
+                }
+                const completados = data.filter(r => (r.estado || '').toLowerCase() === 'completado').length;
+                const activos = data.filter(r => (r.estado || '').toLowerCase() === 'activo').length;
+                const avg = data.reduce((a, r) => a + (r.total_Controles || 0), 0) / data.length;
+                document.getElementById('s-total').textContent = data.length;
+                document.getElementById('s-completado').textContent = completados;
+                document.getElementById('s-activo').textContent = activos;
+                document.getElementById('s-avg').textContent = avg.toFixed(1);
+                tbody.innerHTML = data.map(r => `
+          <tr>
+            <td><strong>${r.ciPaciente || '—'}</strong></td>
+            <td>${r.ciEmpleado || '—'}</td>
+            <td>${fmtDate(r.fechaInicio)}</td>
+            <td>${estadoBadge(r.estado)}</td>
+            <td style="text-align:center">${r.total_Controles ?? 0}</td>
+            <td>${fmtDate(r.ultimo_Control)}</td>
+          </tr>`).join('');
+            } catch (e) {
+                tbody.innerHTML = `<tr><td colspan="6"><div class="state-msg"><div class="icon">⚠️</div>Error: ${e.message}</div></td></tr>`;
             }
-        } catch (e) {
-            showAlert(alertEl, 'error', 'Error de conexión: ' + e.message);
-        } finally {
-            btn.disabled = false;
-            btn.textContent = 'Registrar seguimiento';
-        }
-    }
-    async function buscarSeguimientoPorCI() {
-        const ci = document.getElementById('f-ci-ctrl').value.trim();
-        const infoBox = document.getElementById('f-seg-info');
-        const hiddenId = document.getElementById('f-seg-id');
-
-        if (!ci) {
-            infoBox.value = '⚠ Ingresa un CI primero';
-            return;
         }
 
-        infoBox.value = 'Buscando…';
-        hiddenId.value = '';
+        async function buscarPorCI() {
+            const ci = document.getElementById('ci-buscar').value.trim();
+            if (!ci) { loadSeguimientos(); return; }
+            const tbody = document.getElementById('tbody-seguimiento');
+            tbody.innerHTML = `<tr><td colspan="6"><div class="state-msg"><div class="icon">⏳</div>Buscando…</div></td></tr>`;
+            try {
+                const res = await fetch(`${API}/api/SeguimientoPrenatals/por-ci/${ci}`);
+                if (res.status === 404) {
+                    tbody.innerHTML = `<tr><td colspan="6"><div class="state-msg"><div class="icon">🔍</div>No se encontraron seguimientos para CI: ${ci}</div></td></tr>`;
+                    return;
+                }
+                const data = await res.json();
+                loadSeguimientos(Array.isArray(data) ? data : [data]);
+            } catch (e) {
+                tbody.innerHTML = `<tr><td colspan="6"><div class="state-msg"><div class="icon">⚠️</div>${e.message}</div></td></tr>`;
+            }
+        }
 
-        try {
-            const res = await fetch(`${API}/api/SeguimientoPrenatals/por-ci/${ci}`);
-            if (res.status === 404) {
-                infoBox.value = '✗ No se encontró seguimiento para ese CI';
+        async function loadControles(data) {
+            const tbody = document.getElementById('tbody-control');
+            tbody.innerHTML = `<tr><td colspan="8"><div class="state-msg"><div class="icon">⏳</div>Cargando…</div></td></tr>`;
+            try {
+                if (!data) {
+                    const res = await fetch(`${API}/api/ControlPrenatal`);
+                    data = await res.json();
+                }
+                if (!data.length) {
+                    tbody.innerHTML = `<tr><td colspan="8"><div class="state-msg"><div class="icon">🔍</div>Sin resultados</div></td></tr>`;
+                    return;
+                }
+                const fuera = data.filter(r => r.fuera_de_Rango).length;
+                const pacs = new Set(data.map(r => r.ciPaciente)).size;
+                document.getElementById('c-total').textContent = data.length;
+                document.getElementById('c-fuera').textContent = fuera;
+                document.getElementById('c-pacs').textContent = pacs;
+                tbody.innerHTML = data.map(r => {
+                    const rango = r.rango_Normal || (r.valorMin != null ? `${r.valorMin} – ${r.valorMax}` : '—');
+                    return `<tr>
+            <td>${r.ciPaciente || '—'}</td>
+            <td style="text-align:center">${r.semanaGestacion ?? '—'}</td>
+            <td>${fmtDate(r.fechaControl)}</td>
+            <td>${r.tipo_Signo || r.tipoSigno || '—'}</td>
+            <td class="${r.fuera_de_Rango ? 'out-of-range' : ''}">${r.valor ?? '—'}</td>
+            <td>${r.unidad || '—'}</td>
+            <td style="font-size:.8rem;color:var(--gray-3)">${rango}</td>
+            <td>${r.fuera_de_Rango
+                            ? '<span class="badge badge-red">Fuera de rango</span>'
+                            : '<span class="badge badge-green">Normal</span>'}</td>
+          </tr>`;
+                }).join('');
+            } catch (e) {
+                tbody.innerHTML = `<tr><td colspan="8"><div class="state-msg"><div class="icon">⚠️</div>Error: ${e.message}</div></td></tr>`;
+            }
+        }
+
+        async function filtrarPorSeguimiento() {
+            const id = document.getElementById('seg-id-filtro').value.trim();
+            if (!id) { loadControles(); return; }
+            const tbody = document.getElementById('tbody-control');
+            tbody.innerHTML = `<tr><td colspan="8"><div class="state-msg"><div class="icon">⏳</div>Buscando…</div></td></tr>`;
+            try {
+                const res = await fetch(`${API}/api/ControlPrenatal/por-seguimiento/${id}`);
+                if (res.status === 404) {
+                    tbody.innerHTML = `<tr><td colspan="8"><div class="state-msg"><div class="icon">🔍</div>Sin controles para seguimiento ID: ${id}</div></td></tr>`;
+                    return;
+                }
+                const data = await res.json();
+                loadControles(Array.isArray(data) ? data : [data]);
+            } catch (e) {
+                tbody.innerHTML = `<tr><td colspan="8"><div class="state-msg"><div class="icon">⚠️</div>${e.message}</div></td></tr>`;
+            }
+        }
+
+        async function registrarSeguimiento() {
+            const btn = document.getElementById('btn-reg-seg');
+            const ciPac = document.getElementById('f-ci-paciente').value.trim();
+            const ciEmp = document.getElementById('f-ci-empleado').value.trim();
+
+            if (!ciPac || !ciEmp) {
+                showAlert('alert-seg', 'error', 'Por favor completa los dos campos.');
                 return;
             }
-            const data = await res.json();
-            // Toma el seguimiento más reciente (último del array)
-            const seg = Array.isArray(data) ? data[data.length - 1] : data;
-            hiddenId.value = seg.id;
-            infoBox.value = `✓ ID ${seg.id} — Estado: ${seg.estado} — Controles: ${seg.total_Controles ?? 0}`;
-        } catch (e) {
-            infoBox.value = '✗ Error de conexión: ' + e.message;
+
+            btn.disabled = true;
+            btn.textContent = 'Registrando…';
+            try {
+                const res = await fetch(`${API}/api/SeguimientoPrenatals`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ CIPaciente: ciPac, CIEmpleado: ciEmp, PartoId: null })
+                });
+                const text = await res.text();
+                let data = {};
+                try { data = JSON.parse(text); } catch { }
+                if (res.ok) {
+                    showAlert('alert-seg', 'success', `✓ Seguimiento registrado — CI: ${data.ciPaciente || ciPac}, Estado: ${data.estado || 'Activo'}`);
+                    document.getElementById('f-ci-paciente').value = '';
+                    document.getElementById('f-ci-empleado').value = '';
+                } else {
+                    showAlert('alert-seg', 'error', data.mensaje || data.title || `Error ${res.status}: ${text.slice(0, 150)}`);
+                }
+            } catch (e) {
+                showAlert('alert-seg', 'error', 'Error de conexión: ' + e.message);
+            } finally {
+                btn.disabled = false;
+                btn.textContent = 'Registrar seguimiento';
+            }
         }
-    }
-// ── REGISTRO: nuevo control ──────────────────────────────────────
-async function registrarControl() {
-  const btn   = document.getElementById('btn-reg-ctrl');
-  const alert = document.getElementById('alert-ctrl');
-    const segId = parseInt(document.getElementById('f-seg-id').value || '0');
-  const citaId = parseInt(document.getElementById('f-cita-id').value);
-  const fecha  = document.getElementById('f-fecha').value;
-  const semana = parseInt(document.getElementById('f-semana').value);
-  const tipoId = parseInt(document.getElementById('f-tipo-signo').value);
-  const valor  = parseFloat(document.getElementById('f-valor').value);
 
-    if (!segId) {
-        showAlert(alertEl, 'error', 'Primero busca el CI de la paciente.');
-        return;
-    }
-    if (!citaId || !fecha || !semana || !tipoId || isNaN(valor)) {
-        showAlert(alertEl, 'error', 'Por favor completa todos los campos.');
+        async function buscarSeguimientoPorCI() {
+            const ci = document.getElementById('f-ci-ctrl').value.trim();
+            const infoBox = document.getElementById('f-seg-info');
+            const hidden = document.getElementById('f-seg-id');
 
-  btn.disabled = true;
-  btn.textContent = 'Registrando…';
-  try {
-    const res = await fetch(`${API}/api/ControlPrenatal`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        seguimientoId: segId,
-        citaId,
-        fechaControl: new Date(fecha).toISOString(),
-        semanaGestacion: semana,
-        tipoSignoPrenatalId: tipoId,
-        valor
-      })
-    });
-    const data = await res.json();
-    if (res.ok) {
-      const fueraMsg = data.fuera_De_Rango ? ' ⚠ Fuera de rango normal.' : '';
-      showAlert(alert, 'success', `✓ Control registrado. Signo: ${data.tipo_Signo}, Valor: ${data.valor} ${fueraMsg}`);
-      ['f-seg-id','f-cita-id','f-fecha','f-semana','f-valor'].forEach(id => {
-        document.getElementById(id).value = '';
-      });
-    } else {
-      showAlert(alert, 'error', data.mensaje || 'Error al registrar.');
-    }
-  } catch (e) {
-    showAlert(alert, 'error', 'Error de conexión: ' + e.message);
-  } finally {
-    btn.disabled = false;
-    btn.textContent = 'Registrar control';
-  }
-}
+            if (!ci) {
+                infoBox.value = '⚠ Ingresa un CI primero';
+                return;
+            }
 
-// ── Helpers ──────────────────────────────────────────────────────
-function showAlert(el, type, msg) {
-  el.className = `alert alert-${type} show`;
-  el.textContent = msg;
-  setTimeout(() => el.classList.remove('show'), 5000);
-}
+            infoBox.value = 'Buscando…';
+            hidden.value = '';
 
-async function loadTiposSigno() {
-  try {
-    const res = await fetch(`${API}/api/TipoSignoPrenatals`);
-    const data = await res.json();
-    const sel = document.getElementById('f-tipo-signo');
-    sel.innerHTML = data.map(t => `<option value="${t.id}">${t.nombre} (${t.unidad})</option>`).join('');
-  } catch {
-    document.getElementById('f-tipo-signo').innerHTML = '<option value="">No disponible</option>';
-  }
-}
+            try {
+                const res = await fetch(`${API}/api/SeguimientoPrenatals/por-ci/${ci}`);
+                if (res.status === 404) {
+                    infoBox.value = '✗ No se encontró seguimiento para ese CI';
+                    return;
+                }
+                const data = await res.json();
+                const seg = Array.isArray(data) ? data[data.length - 1] : data;
+                hidden.value = seg.id;
+                infoBox.value = `✓ ID ${seg.id} — Estado: ${seg.estado} — Controles: ${seg.total_Controles ?? 0}`;
+            } catch (e) {
+                infoBox.value = '✗ Error: ' + e.message;
+            }
+        }
 
-// Set today as default date
-document.getElementById('f-fecha').value = new Date().toISOString().split('T')[0];
+        async function registrarControl() {
+            const btn = document.getElementById('btn-reg-ctrl');
+            const segId = parseInt(document.getElementById('f-seg-id').value || '0');
+            const citaId = parseInt(document.getElementById('f-cita-id').value || '0');
+            const fecha = document.getElementById('f-fecha').value;
+            const semana = parseInt(document.getElementById('f-semana').value || '0');
+            const tipoId = parseInt(document.getElementById('f-tipo-signo').value || '0');
+            const valor = parseFloat(document.getElementById('f-valor').value);
 
-// Initial load
-loadSeguimientos();
-loadControles();
-loadTiposSigno();
-</script>
+            if (!segId) {
+                showAlert('alert-ctrl', 'error', 'Primero busca el CI de la paciente para encontrar el seguimiento.');
+                return;
+            }
+            if (!citaId || !fecha || !semana || !tipoId || isNaN(valor)) {
+                showAlert('alert-ctrl', 'error', 'Por favor completa todos los campos.');
+                return;
+            }
+
+            btn.disabled = true;
+            btn.textContent = 'Registrando…';
+            try {
+                const res = await fetch(`${API}/api/ControlPrenatal`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        SeguimientoId: segId,
+                        CitaId: citaId,
+                        FechaControl: new Date(fecha).toISOString(),
+                        SemanaGestacion: semana,
+                        TipoSignoPrenatalId: tipoId,
+                        Valor: valor
+                    })
+                });
+                const text = await res.text();
+                let data = {};
+                try { data = JSON.parse(text); } catch { }
+                if (res.ok) {
+                    const fueraMsg = data.fuera_De_Rango ? ' ⚠ Fuera de rango normal.' : '';
+                    showAlert('alert-ctrl', 'success', `✓ Control registrado. Signo: ${data.tipo_Signo}, Valor: ${data.valor}${fueraMsg}`);
+                    document.getElementById('f-ci-ctrl').value = '';
+                    document.getElementById('f-seg-info').value = '— ingresa el CI y presiona Buscar —';
+                    document.getElementById('f-seg-id').value = '';
+                    document.getElementById('f-cita-id').value = '';
+                    document.getElementById('f-semana').value = '';
+                    document.getElementById('f-valor').value = '';
+                    document.getElementById('f-fecha').value = new Date().toISOString().split('T')[0];
+                } else {
+                    showAlert('alert-ctrl', 'error', data.mensaje || data.title || `Error ${res.status}: ${text.slice(0, 150)}`);
+                }
+            } catch (e) {
+                showAlert('alert-ctrl', 'error', 'Error de conexión: ' + e.message);
+            } finally {
+                btn.disabled = false;
+                btn.textContent = 'Registrar control';
+            }
+        }
+
+        async function loadTiposSigno() {
+            try {
+                const res = await fetch(`${API}/api/TipoSignoPrenatals`);
+                const data = await res.json();
+                document.getElementById('f-tipo-signo').innerHTML =
+                    data.map(t => `<option value="${t.id}">${t.nombre} (${t.unidad})</option>`).join('');
+            } catch {
+                document.getElementById('f-tipo-signo').innerHTML = '<option value="">No disponible</option>';
+            }
+        }
+
+        document.getElementById('f-fecha').value = new Date().toISOString().split('T')[0];
+        loadSeguimientos();
+        loadControles();
+        loadTiposSigno();
+    </script>
 </body>
 </html>
