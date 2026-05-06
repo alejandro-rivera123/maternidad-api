@@ -648,41 +648,53 @@ async function filtrarPorSeguimiento() {
 }
 
 // ── REGISTRO: nuevo seguimiento ──────────────────────────────────
-async function registrarSeguimiento() {
-  const btn   = document.getElementById('btn-reg-seg');
-  const alert = document.getElementById('alert-seg');
-  const ciPac = document.getElementById('f-ci-paciente').value.trim();
-  const ciEmp = document.getElementById('f-ci-empleado').value.trim();
+    async function registrarSeguimiento() {
+        const btn = document.getElementById('btn-reg-seg');
+        const alertEl = document.getElementById('alert-seg');
+        const ciPac = document.getElementById('f-ci-paciente').value.trim();
+        const ciEmp = document.getElementById('f-ci-empleado').value.trim();
 
-  if (!ciPac || !ciEmp) {
-    showAlert(alert, 'error', 'Por favor completa todos los campos.');
-    return;
-  }
+        if (!ciPac || !ciEmp) {
+            showAlert(alertEl, 'error', 'Por favor completa los dos campos.');
+            return;
+        }
 
-  btn.disabled = true;
-  btn.textContent = 'Registrando…';
-  try {
-    const res = await fetch(`${API}/api/SeguimientoPrenatals`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ ciPaciente: ciPac, ciEmpleado: ciEmp })
-    });
-    const data = await res.json();
-    if (res.ok) {
-      showAlert(alert, 'success', `✓ Seguimiento registrado para CI ${data.ciPaciente} — Estado: ${data.estado}`);
-      document.getElementById('f-ci-paciente').value = '';
-      document.getElementById('f-ci-empleado').value = '';
-    } else {
-      showAlert(alert, 'error', data.mensaje || 'Error al registrar.');
+        btn.disabled = true;
+        btn.textContent = 'Registrando…';
+
+        try {
+            const res = await fetch(`${API}/api/SeguimientoPrenatals`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    CIPaciente: ciPac,
+                    CIEmpleado: ciEmp,
+                    PartoId: null
+                })
+            });
+
+            const text = await res.text();
+            let data = {};
+            try { data = JSON.parse(text); } catch { }
+
+            if (res.ok) {
+                showAlert(alertEl, 'success',
+                    `✓ Seguimiento registrado — CI: ${data.ciPaciente || ciPac}, Estado: ${data.estado || 'Activo'}`
+                );
+                document.getElementById('f-ci-paciente').value = '';
+                document.getElementById('f-ci-empleado').value = '';
+            } else {
+                showAlert(alertEl, 'error',
+                    data.mensaje || data.title || `Error ${res.status}: ${text.slice(0, 120)}`
+                );
+            }
+        } catch (e) {
+            showAlert(alertEl, 'error', 'Error de conexión: ' + e.message);
+        } finally {
+            btn.disabled = false;
+            btn.textContent = 'Registrar seguimiento';
+        }
     }
-  } catch (e) {
-    showAlert(alert, 'error', 'Error de conexión: ' + e.message);
-  } finally {
-    btn.disabled = false;
-    btn.textContent = 'Registrar seguimiento';
-  }
-}
-
 // ── REGISTRO: nuevo control ──────────────────────────────────────
 async function registrarControl() {
   const btn   = document.getElementById('btn-reg-ctrl');
